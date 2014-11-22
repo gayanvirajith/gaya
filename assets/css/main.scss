@@ -1,0 +1,151 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+/**
+ *
+ * Gaya jekyll theme
+ * Designed, built, by web-create. 
+ *
+ * CONTENTS
+ *
+ * SETTINGS
+ * Globals    - Import sass globally used variables and configs properties
+ *
+ * TOOLS
+ * Mixins and Functions - Sass mixins & functions
+ * Modules    - Sass modules
+ *
+ * GENERTIC
+ * Resets       - Gloabal resets thanks to meyerweb.com
+ * Body resets  - Body resets, box sizing 
+ * 
+ * BASE
+ * Typography - Custom typography
+ * Syntax - Syntax highlighting
+ * 
+ * OBJECTS
+ * Wrappers   - Wrapping and constraining elements.
+ * 
+ * COMPONENTS
+ * Main head  - Site header
+ * Sidebar    - Sidebar components thanks to Chris Coyier
+ * Post       - Post/Page item styles
+ * 
+ */
+
+
+
+
+
+@charset "utf-8";
+
+
+
+
+
+/*------------------------------------*\
+    #SETTINGS-GLOBALS
+\*------------------------------------*/
+
+@import "helpers/variables";
+
+
+
+
+
+
+/*------------------------------------*\
+    #TOOLS-MIXINGS-AND-FUNCTIONS
+\*------------------------------------*/
+
+@import "helpers/all";
+
+
+
+
+
+/*------------------------------------*\
+    #TOOLS-MODULES
+\*------------------------------------*/
+
+@import "modules/all";
+
+
+
+
+
+/*------------------------------------*\
+    #GENERTIC-RESETS
+\*------------------------------------*/
+
+@import "base/reset";
+
+
+
+
+
+/*------------------------------------*\
+    #GENERTIC-BODY-RESETS
+\*------------------------------------*/
+
+/*
+ *
+ * Enable google webkit font smoothing
+ * Reset to border-box
+ * Setting up font family
+ */
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  //change the default tap highlight color, when you tap on mobile device
+  -webkit-tap-highlight-color: transparent;
+}
+
+*, *:after, *:before {
+  @include box-sizing(border-box);
+}
+
+body {
+  font: {
+    size: 100%;
+    family: $font-family-base; // variables inside partials > _variables.scss
+  }
+  color: $gray-darker;
+}
+
+/* Prevent scroll on narrow devices */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Anchor tag style */
+a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  color: $color-1;
+}
+
+a:hover {
+  border-bottom-color: $color-1; 
+}
+
+
+/*------------------------------------*\
+    #SETTINGS-TYPE
+\*------------------------------------*/
+
+@import "base/type";
+
+
+
+
+
+/*------------------------------------*\
+    #SETTINGS-SYNTAX
+\*------------------------------------*/
+
+@import "base/syntax-highlighting";
