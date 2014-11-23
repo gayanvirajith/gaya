@@ -2,8 +2,25 @@
 Handler for toggling the sidebar `.sidebar-toggle-checkbox` is used for regular
 styles and `#sidebar-toggle-checkbox` for behavior. 
 -->
-<input type="checkbox" class="sidebar-toggle-checkbox" id="sidebar-toggle-checkbox">
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
 <div class="sidebar" id="sidebar">
-  
+
+  <div class="sidebar-info">
+      <p>
+        Programmer / Web Developer, 
+        <a href="http://processwire.com/" target="_blank">@processwire</a> 
+        CMS/CMF &amp;
+        <a href="http://jekyllrb.com/" target="_blank">@jekyll</a> 
+        enthusiast.
+      </p>
+  </div>
+
+  <div class="sidebar-info small">
+     <p>
+       Copyright &copy; Web-Create - {{ site.time | date: '%Y' }}.
+       Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>
+     </p>
+  </div>
+
 </div>
