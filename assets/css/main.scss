@@ -25,12 +25,6 @@
  * Syntax - Syntax highlighting
  * 
  * OBJECTS
- * Wrappers   - Wrapping and constraining elements.
- * 
- * COMPONENTS
- * Main head  - Site header
- * Sidebar    - Sidebar components thanks to Chris Coyier
- * Post       - Post/Page item styles
  * 
  */
 
@@ -131,6 +125,14 @@ a {
 
 a:hover {
   border-bottom-color: $color-1; 
+}
+
+/* Responsive images */
+img {
+  border: 0;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 
