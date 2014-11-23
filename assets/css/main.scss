@@ -10,22 +10,25 @@
  * CONTENTS
  *
  * SETTINGS
- * Globals    - Import sass globally used variables and configs properties
+ * Globals              - Import sass global variables and configs properties
  *
  * TOOLS
- * Mixins and Functions - Sass mixins & functions
- * Modules    - Sass modules
+ * Mixins/Functions     - Sass mixins & functions
+ * Modules              - Sass modules
  *
  * GENERTIC
- * Resets       - Gloabal resets thanks to meyerweb.com
- * Body resets  - Body resets, box sizing 
+ * Resets               - Gloabal resets thanks to meyerweb.com
+ * Body resets          - Body resets, box sizing 
  * 
  * BASE
- * Typography - Custom typography
- * Syntax - Syntax highlighting
+ * Typography           - Custom typography
+ * Syntax               - Syntax highlighting
  * 
  * OBJECTS
- * 
+ * Wrappers             - Wrapping and constraining elements.
+ *  
+ * COMPONENTS
+ * header               - Site header
  */
 
 
@@ -124,6 +127,7 @@ a {
 }
 
 a:hover {
+  @include transition(all .3s);
   border-bottom-color: $color-1; 
 }
 
@@ -151,3 +155,105 @@ img {
 \*------------------------------------*/
 
 @import "base/syntax-highlighting";
+
+
+
+
+
+/*------------------------------------*\
+    #OBJECTS-WRAPPERS
+\*------------------------------------*/
+
+/*
+ * Main wrapper is used to re-position the site content when sidebar is toggled.
+ */
+
+.main-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/*
+ * Container - Centering the page content.
+ * 
+ */
+
+.container {
+  width: 90%;
+  max-width: $M; // See breakpoints in css/_sass/helpers/_layout.scss
+  margin: 0 auto;
+
+  &::after { /* Clearfix */
+      content: '';
+      display: table;
+      clear: both;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS-HEADER
+\*------------------------------------*/
+
+/*
+ * Header
+ *
+ * header used to keep the logo, site name and short description.
+ */
+
+.header {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid $gray-lighter;
+  width: 100%;
+  padding: 1em 0;  
+  background: #f5f5f5;
+  @include MQ(M){
+    display: table;
+    height: 50px;
+  }
+  /* 
+   * Special media query hack for small tablet screen.
+   * Due to overlap of menu toggle and the logo.
+   */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .container {
+      width: 75%;
+    }
+  }
+}
+
+.header .header-logo {
+  padding-right: 10px;
+  @include column(1);
+  text-align: center;
+}
+
+.header .header-logo a {
+  &:hover, &:focus {
+    border-bottom-color: transparent;
+  }
+}
+
+.header .header-title {
+  display: none;
+}
+
+.header .header-logo, .header .header-title {
+  @include MQ(M) {
+    float: none;
+    width: auto;
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.header .header-title h3 { 
+  margin-bottom: 15px; 
+  small {
+    padding-left: 10px;
+  }
+}

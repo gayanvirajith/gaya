@@ -18,7 +18,23 @@
     {% include styles/highlight_color.html %}
   </head>
   <body>
-    {{ content }}
+    
+    {% include sidebar.html %}
+
+    <div class="main-wrapper">
+      <div class="header">
+        <div class="container">
+          <div class="header-logo">{% include logo.html %}</div>
+          <div class="header-title">
+            <a href="{{ '' | prepend: site.baseurl | prepend: site.url | append: '/' }}" 
+              title="{{ site.title }}"> 
+              <h3>{{ site.title }}<small>{{ site.tag_line }}</small></h3>
+            </a>
+          </div>        
+        </div>  
+      </div>
+      {{ content }}
+    </div>
     <script type="text/javascript">
       /* To avoid render blocking css */
       var cb = function() {
