@@ -112,6 +112,7 @@ body {
     family: $font-family-base; // variables inside partials > _variables.scss
   }
   color: $gray-darker;
+  background: #f7f7f7;
 }
 
 /* Prevent scroll on narrow devices */
@@ -512,9 +513,13 @@ img {
 
 .post, .page {
   margin-bottom: 2em;
+  padding: 1em;
   @include MQ(M) {
     margin-bottom: 4em;
   }
+  background: $color-white;
+  @include border-radius(.2em);
+  box-shadow: 0 0 10px rgba(#000, .1);
 }
 
 /* Article title / Page title */
