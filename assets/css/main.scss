@@ -326,7 +326,7 @@ img {
 
 .sidebar .sidebar-info p { @include font-size(16px); }
 
-.sidebar .sidebar-info.small { padding: 0 0 1em 0; }
+.sidebar .sidebar-info.small { padding: 1em 0; }
 
 .sidebar .sidebar-info.small p { @include font-size(12px);}
 
@@ -336,23 +336,24 @@ img {
 
 /* Sidebar nav */
 .sidebar .sidebar-nav {
-  border-bottom: 1px solid lighten($color-1, 10%);
+  margin: 0 -1em;
+  border-top: 1px solid $color-white;
 }
 
-.sidebar .sidebar-nav-item {
+.sidebar .sidebar-nav .sidebar-nav-item {
   display: block;
   padding: .5rem 1rem;
-  border-top: 1px solid lighten($color-1, 10%);
 }
 
-.sidebar .sidebar-nav-item.active {
-  background-color: $color-1;
+
+
+.sidebar .sidebar-nav a {
+  border-bottom: 1px solid $color-white;
 }
-.sidebar a.sidebar-nav-item:hover,
-.sidebar a.sidebar-nav-item:focus {
-  text-decoration: none;
-  background-color: lighten($color-1, 2%);
-  border-color: transparent;
+
+.sidebar .sidebar-nav a.sidebar-nav-item:hover,
+.sidebar .sidebar-nav a.sidebar-nav-item:focus {
+
 }
 
 /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
@@ -516,6 +517,7 @@ img {
   padding: 1em;
   @include MQ(M) {
     margin-bottom: 4em;
+    padding: 2em;
   }
   background: $color-white;
   @include border-radius(.2em);

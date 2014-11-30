@@ -1,0 +1,17 @@
+ a { color: {{ site.theme.highlight_color }};}
+  a:hover { border-bottom-color: {{ site.theme.highlight_color }};}
+  .sidebar { background-color: {{ site.theme.highlight_color }};}
+  .sidebar-toggle:active,
+  #sidebar-checkbox:checked ~ .sidebar-toggle { 
+    background-color: {{ site.theme.highlight_color }};
+  }
+  .sidebar a:hover {
+    border-bottom-color: #FFFFFF; 
+  }
+  .sidebar .sidebar-nav a:hover {
+    background: lighten({{ site.theme.highlight_color }}, 3%);
+  }
+
+.sidebar .sidebar-nav .sidebar-nav-item.active {
+  background-color: darken({{ site.theme.highlight_color }}, 3%);
+}

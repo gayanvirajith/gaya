@@ -22,7 +22,12 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->   
 
-    {% include styles/highlight_color.html %}
+    <style type="text/css">
+    {% capture include_to_scssify %}
+      {% include style.scss %}
+    {% endcapture %}
+    {{ include_to_scssify | scssify }}
+    </style>
     
   </head>
   <body>
