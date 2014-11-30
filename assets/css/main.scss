@@ -29,6 +29,7 @@
  *  
  * COMPONENTS
  * header               - Site header
+ * sidebar              - Sidebar & toggle
  */
 
 
@@ -171,6 +172,7 @@ img {
 .main-wrapper {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 /*
@@ -229,6 +231,11 @@ img {
   padding-right: 10px;
   @include column(1);
   text-align: center;
+}
+
+.header .header-logo img {
+  text-align: center;
+  margin: 0 auto; 
 }
 
 .header .header-logo a {
@@ -295,18 +302,30 @@ img {
 }
 
 /* Sidebar content */
+
+.sidebar { 
+  text-align: center; 
+  padding: 1em;
+}
+
 .sidebar a {
   font-weight: normal;
   color: $color-white;
   text-decoration: none;
 }
 
-.sidebar .sidebar-info {
-  padding: 1rem;
+.sidebar .sidebar-info { padding: 1em 0; }
 
+.sidebar img { 
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;   
+  border-radius: 50%;
 }
 
 .sidebar .sidebar-info p { @include font-size(16px); }
+
+.sidebar .sidebar-info.small { padding: 0 0 1em 0; }
 
 .sidebar .sidebar-info.small p { @include font-size(12px);}
 
@@ -473,4 +492,64 @@ img {
   -webkit-transform: translateX(14rem);
       -ms-transform: translateX(14rem);
           transform: translateX(14rem);
+}
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS-POST
+\*------------------------------------*/
+
+/*
+ * Post/Pages 
+ * Every post article can be wrapped in a container class named `.post` 
+ * and used in post layout under _layout folder.
+ * Every page content also wrapped in a container named `.page` and used 
+ * in page layout under _layout folder. 
+ */
+
+.post, .page {
+  margin-bottom: 2em;
+  @include MQ(M) {
+    margin-bottom: 4em;
+  }
+}
+
+/* Article title / Page title */
+.post-title a {
+  color: $color-1;
+  border-bottom-width: 2px;
+}
+
+/* Meta info after post-title */
+.post-meta {
+  color: $gray-light;
+  padding: 1.5em 0 2em 0;
+  letter-spacing: 1px;
+  @include MQ(M) {
+    font-size: 18px;    
+  }
+}
+
+/* Related post articles */
+.related-posts {
+  padding: 1em 0;
+  border-bottom: 1px solid $gray-lighter;
+  @include MQ(M) {
+    padding: 2em 0;
+  }
+}
+
+.related-posts ul {
+  list-style: none;
+}
+
+.related-posts ul li a {
+  &:hover, &:focus {
+    small {
+      color: inherit; 
+    }
+  }
 }
