@@ -1,17 +1,28 @@
- a { color: {{ site.theme.highlight_color }};}
-  a:hover { border-bottom-color: {{ site.theme.highlight_color }};}
-  .sidebar { background-color: {{ site.theme.highlight_color }};}
-  .sidebar-toggle:active,
-  #sidebar-checkbox:checked ~ .sidebar-toggle { 
-    background-color: {{ site.theme.highlight_color }};
-  }
-  .sidebar a:hover {
-    border-bottom-color: #FFFFFF; 
-  }
-  .sidebar .sidebar-nav a:hover {
-    background: lighten({{ site.theme.highlight_color }}, 3%);
-  }
-
+a, .post-title a { color: {{ site.theme.highlight_color }};}
+a:hover { border-bottom-color: {{ site.theme.highlight_color }};}
+.sidebar { background-color: {{ site.theme.highlight_color }};}
+.sidebar-toggle:active,
+#sidebar-checkbox:checked ~ .sidebar-toggle { 
+  background-color: {{ site.theme.highlight_color }};
+}
+.sidebar a:hover, .sidebar .sidebar-nav a   {
+  border-bottom-color: lighten({{ site.theme.highlight_color }}, 5%); 
+}
+.sidebar .sidebar-nav {
+  border-top-color: lighten({{ site.theme.highlight_color }}, 5%);
+}
+.sidebar .sidebar-nav a:hover {
+  background: lighten({{ site.theme.highlight_color }}, 3%);
+}
 .sidebar .sidebar-nav .sidebar-nav-item.active {
   background-color: darken({{ site.theme.highlight_color }}, 3%);
+}
+
+ul.social-media li>a {
+  border-color: lighten({{ site.theme.highlight_color }}, 5%); 
+  border-bottom-color: lighten({{ site.theme.highlight_color }}, 5%) !important;
+}
+
+ul.social-media li>a:hover {
+  background-color: lighten({{ site.theme.highlight_color }}, 50%);
 }

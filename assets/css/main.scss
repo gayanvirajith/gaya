@@ -30,6 +30,7 @@
  * COMPONENTS
  * header               - Site header
  * sidebar              - Sidebar & toggle
+ * post/pages           - Post/Page articles
  */
 
 
@@ -208,6 +209,7 @@ img {
  */
 
 .header {
+  background: $color-white;
   margin-bottom: 3rem;
   border-bottom: 1px solid $gray-lighter;
   width: 100%;
@@ -287,8 +289,8 @@ img {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: -14rem;
-  width: 14rem;
+  left: -15rem;
+  width: 15rem;
   visibility: hidden;
   overflow-y: auto;
   @include font-size(15px);
@@ -491,9 +493,9 @@ img {
 #sidebar-checkbox:checked ~ .sidebar,
 #sidebar-checkbox:checked ~ .main-wrapper,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  -webkit-transform: translateX(14rem);
-      -ms-transform: translateX(14rem);
-          transform: translateX(14rem);
+  -webkit-transform: translateX(15rem);
+      -ms-transform: translateX(15rem);
+          transform: translateX(15rem);
 }
 
 
@@ -558,5 +560,28 @@ img {
     small {
       color: inherit; 
     }
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS-BANNER-IMAGE
+\*------------------------------------*/
+
+/*
+ *
+ * Banner image is the main image for aticle/page.
+ * see includes/banner-image.html
+ *
+ */
+
+.post .banner-image, .page .banner-image {
+  margin: -1em -1em 0 -1em;
+  padding-bottom: 1em;
+  @include MQ(M) {
+    margin: -2em -2em 0 -2em;
   }
 }

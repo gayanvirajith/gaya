@@ -2,6 +2,8 @@
 layout: page
 title: About me
 permalink: /about/
+banner_image: sample-banner-image-2.jpg
+banner_image_alt: About me
 ---
 
 Hi, I am Gayan Virajith, a developer (who works on the web) based on Depanama, 

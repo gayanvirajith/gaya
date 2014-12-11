@@ -2,6 +2,53 @@
 layout: default
 ---
 
-<div class="post">
-  h1
+<div class="posts">
+  {% for post in paginator.posts %}
+  <article class="post">
+
+    {% if post.banner_image %}
+    <div class="banner-image">
+      <img 
+          src="{{ "/assets/images/" | append: post.banner_image | prepend: site.baseurl | prepend: site.url }}" 
+          alt="{{ post.banner_image_alt }}">
+    </div>
+    {% endif %}
+
+    <h1 class="post-title">
+      <a href="{{ post.url | append: '/' | replace: '//', '/' | prepend: site.baseurl | prepend: site.url |  }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <div class="post-meta">{{ post.date | date_to_string }}</div>
+     {{ post.excerpt }}
+  </article>
+  {% endfor %}
 </div>
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  
+  {% if paginator.next_page %}
+      <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl | append: '/' | replace: '//', '/' }}">Older</a>    
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  
+  {% if paginator.previous_page %}
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl | append: '/' | replace: '//', '/' }}">Newer</a>
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}  
+  
+</div>
+{% endif %}
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "{{ '' | prepend: site.baseurl | prepend: site.url | append: '/' }}"
+    }
+}
+</script>

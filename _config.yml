@@ -12,7 +12,7 @@ url: "http://localhost:4000" # the base hostname & protocol for your site
 # Theme customization - please change from the defaults!
 theme:
   # Color for top bar, links, etc
-  highlight_color: '#272935'
+  highlight_color: "#205081" # "#272935"
   # Social media links, leave blank to ignore
   social: 
     github: gayanvirajith
@@ -24,6 +24,12 @@ theme:
 
 # Build settings
 markdown: kramdown
+
+# Permalinks
+permalink:        pretty
+
+# Pagination config
+paginate: 5
 
 # Files/Folders to be excluded from generated _site folder
 exclude: 

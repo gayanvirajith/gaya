@@ -13,10 +13,9 @@ ul.social-media {
     width: 24px;
     height: 24px;
     border: 1px solid $color-white;
-    border-bottom-color: $color-white !important;
+    border-bottom-color: $color-white;
     background-image: url("./images/socials-icons..svg");
     background-size: 168px 48px;
-    @include border-radius(0.25em);
     @include transition(background-color 0.2s);
     border-bottom-color: transparent;
 
