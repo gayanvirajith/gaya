@@ -6,11 +6,15 @@
   <head>
     <title></title>
 
+    <meta charset="utf-8">
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <link rel="alternate" type="application/rss+xml" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
     <link rel="prefetch" href="{{ site.url }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
     <link rel="stylesheet" 
     href="{{ '/assets/css/main.css' | prepend: site.baseurl | prepend: site.url }}">
 
@@ -85,5 +89,7 @@
         }, false);
       })(document);
     </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script async type="text/javascript" src="{{ '/assets/js/gaya.js' | prepend: site.baseurl | prepend: site.url }}"></script>
   </body>
 </html>

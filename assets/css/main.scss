@@ -578,7 +578,10 @@ img {
  *
  */
 
-.post .banner-image, .page .banner-image {
+.post .banner-image, 
+.page .banner-image, 
+.post .banner_video, 
+.page .banner_video {
   margin: -1em -1em 0 -1em;
   padding-bottom: 1em;
   @include MQ(M) {

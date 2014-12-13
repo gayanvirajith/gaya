@@ -14,6 +14,12 @@ layout: default
     </div>
     {% endif %}
 
+    {% if post.banner_video %}
+    <div class="banner_video">
+      {{ post.banner_video }}
+    </div>
+    {% endif %}
+
     <h1 class="post-title">
       <a href="{{ post.url | append: '/' | replace: '//', '/' | prepend: site.baseurl | prepend: site.url |  }}">
         {{ post.title }}
