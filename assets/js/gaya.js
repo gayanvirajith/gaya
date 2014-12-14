@@ -82,6 +82,27 @@
 // Works with either jQuery or Zepto
 })( window.jQuery || window.Zepto );
 
-jQuery(document).ready(function(){
-    jQuery(".post").fitVids();
+jQuery(document).ready(function() {
+
+  jQuery(".post").fitVids();
+
+  // Load discus comment
+  function initDisqusComments(){
+
+    if(config.disqus_shortname != '') {
+      var disqus_shortname = config.disqus_shortname;
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    }
+  }
+
+  $('.load-view').click(function(){
+    initDisqusComments();
+    $(this).fadeOut(200);
+  });
+
+
 });

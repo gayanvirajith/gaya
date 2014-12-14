@@ -90,6 +90,11 @@
       })(document);
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+      var config = {
+        "discus_shortname": "{{ site.theme.discus_shortname }}"
+      };
+    </script>
     <script async type="text/javascript" src="{{ '/assets/js/gaya.js' | prepend: site.baseurl | prepend: site.url }}"></script>
   </body>
 </html>

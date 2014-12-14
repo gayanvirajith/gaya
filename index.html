@@ -8,9 +8,12 @@ layout: default
 
     {% if post.banner_image %}
     <div class="banner-image">
+      <a href="{{ post.url | append: '/' | replace: '//', '/' | prepend: site.baseurl | prepend: site.url |  }}" 
+        title="{{ post.title }}">
       <img 
           src="{{ "/assets/images/" | append: post.banner_image | prepend: site.baseurl | prepend: site.url }}" 
-          alt="{{ post.banner_image_alt }}">
+          alt="{% if post.banner_image_alt %}{{ post.banner_image_alt }}{% else %}{{ post.title }} {% endif %}">
+      </a>
     </div>
     {% endif %}
 

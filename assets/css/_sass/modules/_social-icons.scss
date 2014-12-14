@@ -60,12 +60,19 @@ ul.social-media {
   }
 
   li a.pinterest {
-      background-position: -120px 0;
-      &:hover {
-        background-position: -120px -24px;
-      }
+    background-position: -144px 0;
+    &:hover {
+      background-position: -144px -24px;
     }
   }
+
+  li a.rss {
+    background-position: -120px 0;
+    &:hover {
+      background-position: -120px -24px;
+    }
+  }
+}
 
 /**
  * IE fallback 
