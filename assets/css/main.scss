@@ -601,10 +601,51 @@ img {
 
 /*
  * 
- * Disqus comments 
+ * Disqus comments, share-buttons 
  */
 
 .comments {
   border-top: 1px solid $gray-lighter;
-  padding: 1em 0;
+  padding: 1.5em 0 1em 0;
+  @include column(1);
+  display: block;
+  position:relative;
+  @include font-size(14px);
+}
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS-AUTHOR-AND-SHARE-BUTTONS
+\*------------------------------------*/
+
+/*
+ * Author information on post page
+ */
+
+.author-info {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.author, .share-buttons {
+  border-top: 1px solid $gray-lighter;
+  padding: 1em 0 0 0;
+  @include column(1);
+  @include MQ(M) {
+    padding: 1em .5em 0 0;
+    @include column(.5);
+  } 
+}
+
+.author, .share-buttons { 
+  h5, h6 { margin: 0 0 4px 0; }
+  h5 { text-transform: uppercase; color: $gray-darker; }
+  p { @include font-size(14px); }
+  img { float:left; margin-right: 1em; }
+  ul { margin-bottom: 0; }
 }

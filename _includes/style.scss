@@ -19,6 +19,7 @@ a:hover { border-bottom-color: {{ site.theme.highlight_color }};}
 }
 
 ul.social-media li>a {
+  background-color: darken({{ site.theme.highlight_color }}, 3%);
   border-color: lighten({{ site.theme.highlight_color }}, 5%); 
   border-bottom-color: lighten({{ site.theme.highlight_color }}, 5%) !important;
 }

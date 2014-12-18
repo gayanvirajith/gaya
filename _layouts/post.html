@@ -23,9 +23,19 @@ layout: default
   </header>
 
   <article class="post-content">
-    {{ content }}
+    {{ content }}    
   </article>
 
+  <div class="author-info">
+    {% if site.theme.show_author_info %}
+      {% include author.html %}
+    {% endif %}
+  
+    {% if site.theme.show_share_buttons %}
+      {% include share-buttons.html %}
+    {% endif %}  
+  </div>
+  
   {% if page.comments %}
     <div class="comments">
         <a href="javascript:;" class="load-view">View Comments...</a>

@@ -23,6 +23,7 @@ Thanks
 Find me on [Google+][google] / [Twitter][Twitter] / [Github][github] or just say `Hello` at 
 [gayanvirajith@gmail.com](gayanvirajith@gmail.com).
 
+{% include social.html %}
 
 [tf]: http://template-factory.nl
 [m]: http://mearch.com
