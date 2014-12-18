@@ -91,14 +91,3 @@ ul.social-media {
     background-color: $color-white;
   }
 }
-
-.share-buttons {
-  @include column(1); 
-  padding: 0 0 .5em 0;
-  @include MQ(M) {
-    padding: 0;
-    @include column(.5);
-  } 
-}
-.share-buttons h5 { text-transform: uppercase; margin: 0 0 2px 0;}
-.share-buttons ul { margin-bottom: 0; }
