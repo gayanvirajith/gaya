@@ -4,7 +4,7 @@
 
 - [ ] 404 page.
 - [ ] IE fallback page.
-- [ ] Social media share buttons for post page.
+- [x] Social media share buttons for post page.
 - [ ] Categories/Tags feature
 - [ ] All categories page.
 - [ ] All tags page.
