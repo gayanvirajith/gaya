@@ -26,24 +26,6 @@ layout: default
     {{ content }}    
   </article>
 
-  <div class="author-info">
-    {% if site.theme.show_author_info %}
-      {% include author.html %}
-    {% endif %}
-  
-    {% if site.theme.show_share_buttons %}
-      {% include share-buttons.html %}
-    {% endif %}  
-  </div>
-  
-  {% if page.comments %}
-    <div class="comments">
-        <a href="javascript:;" class="load-view">View Comments...</a>
-        <div id="disqus_thread"></div>
-        <div id="g-comments"></div>
-    </div>
-  {% endif %}
-
   {% if site.related_posts %}
     <div class="related-posts">
       <h4>Related Posts</h4>
@@ -59,6 +41,24 @@ layout: default
           </li>
         {% endfor %}
       </ul>
+    </div>
+  {% endif %}
+
+  <div class="author-info">
+    {% if site.theme.show_author_info %}
+      {% include author.html %}
+    {% endif %}
+  
+    {% if site.theme.show_share_buttons %}
+      {% include share-buttons.html %}
+    {% endif %}  
+  </div>
+  
+  {% if page.comments %}
+    <div class="comments">
+        <a href="javascript:;" class="load-view">View Comments...</a>
+        <div id="disqus_thread"></div>
+        <div id="g-comments"></div>
     </div>
   {% endif %}
 </div>

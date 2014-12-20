@@ -115,7 +115,7 @@ body {
     family: $font-family-base; // variables inside partials > _variables.scss
   }
   color: $gray-dark;
-  background: #f7f7f7;
+  background: $main-bg-color;
 }
 
 /* Prevent scroll on narrow devices */
@@ -526,6 +526,7 @@ img {
   background: $color-white;
   @include border-radius(.2em);
   box-shadow: 0 0 10px rgba(#000, .1);
+  overflow: hidden;
 }
 
 /* Article title / Page title */
@@ -547,9 +548,9 @@ img {
 /* Related post articles */
 .related-posts {
   padding: 1em 0;
-  border-bottom: 1px solid $gray-lighter;
+  border-top: 1px solid $gray-lighter;
   @include MQ(M) {
-    padding: 2em 0;
+    padding: 1em 0 1em 0;
   }
 }
 
