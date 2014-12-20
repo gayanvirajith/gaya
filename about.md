@@ -20,8 +20,8 @@ Thanks
 
 ### Contact me
 
-Find me on [Google+][google] / [Twitter][Twitter] / [Github][github] or just say `Hello` at 
-[gayanvirajith@gmail.com](gayanvirajith@gmail.com).
+Say `Hello` at [webcreatelk@gmail.com](gayanvirajith@gmail.com) or find
+me on
 
 {% include social.html %}
 

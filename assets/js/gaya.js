@@ -1,3 +1,40 @@
+/*
+ * Browser support detection
+ */
+var browserSupport = (function(){
+  var htmlElemClasses = document.querySelector('html').className.split(' ');
+  for ( var i = 0; i < htmlElemClasses.length; i += 1 ){
+    var className = htmlElemClasses[i];
+    if ( className === 'lt-ie9' ){
+      return true;
+    }
+  }
+}());
+
+if (browserSupport){
+  window.location=browser_warning_page;
+}
+
+/*
+ * Sidebar toggle function 
+ */
+
+(function(document) {
+  var toggle = document.querySelector('.sidebar-toggle');
+  var sidebar = document.querySelector('#sidebar');
+  var checkbox = document.querySelector('#sidebar-checkbox');
+
+  document.addEventListener('click', function(e) {
+    var target = e.target;
+
+    if(!checkbox.checked ||
+       sidebar.contains(target) ||
+       (target === checkbox || target === toggle)) return;
+
+    checkbox.checked = false;
+  }, false);
+})(document);
+
 /*global jQuery */
 /*jshint browser:true */
 /*!

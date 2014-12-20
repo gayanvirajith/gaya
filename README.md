@@ -2,8 +2,8 @@
 
 #### Todo
 
-- [ ] 404 page.
-- [ ] IE fallback page.
+- [x] 404 page.
+- [x] IE fallback page.
 - [x] Social media share buttons for post page.
 - [ ] Categories/Tags feature
 - [ ] All categories page.
