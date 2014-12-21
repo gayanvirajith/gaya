@@ -1,3 +1,4 @@
+{% capture author_info %}
 <div class="author">
   <a href="#">
     <img 
@@ -31,3 +32,4 @@
     {% endif %}
   </p>
 </div>
+{% endcapture %}{{ author_info | strip_newlines }}

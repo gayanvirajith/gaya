@@ -1,6 +1,8 @@
+{% capture logo %}
 <a href="{{ '' | prepend: site.baseurl | prepend: site.url | append: '/' }}" 
   title="{{ site.title }}">
   <img 
     src="{{ '/assets/images/logo.png' | prepend: site.baseurl | prepend: site.url }}"
     alt="{{ site.title }}" />
 </a>
+{% endcapture %}{{ logo | strip_newlines }}

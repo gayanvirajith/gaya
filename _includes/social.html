@@ -1,4 +1,4 @@
-
+{% capture social_media_li %}
 <ul class="social-media">
 
     {% if site.theme.social.twitter %}
@@ -58,3 +58,4 @@
     </li>
 
 </ul>
+{% endcapture %}{{ social_media_li | strip_newlines }}

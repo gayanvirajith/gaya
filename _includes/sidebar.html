@@ -1,3 +1,4 @@
+{% capture sidebar %}
 <!-- 
 Handler for toggling the sidebar `.sidebar-toggle-checkbox` is used for regular
 styles and `#sidebar-toggle-checkbox` for behavior. 
@@ -55,3 +56,4 @@ styles and `#sidebar-toggle-checkbox` for behavior.
   {% include social.html %}
 
 </div>
+{% endcapture %}{{ sidebar | strip_newlines }}
