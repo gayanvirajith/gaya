@@ -1,0 +1,52 @@
+/*
+ * Button set module
+ */
+
+%button {
+  padding: 20px 25px;
+  line-height: 5px;
+  position: relative;
+  margin: 0 5px 20px 0;
+  color: $button-fg-color;
+  border: 1px solid #EEEEEE;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border-bottom-width: 2px;
+  display: inline-block;
+
+  @include border-radius(.2em);
+  @include box-shadow(1px, 1px, 3px, $button-shadow-color);
+
+  &:hover, &:focus {
+    @include transition(background 0.2s);        
+  }
+
+  &:active {
+    @include transform(translateY(1px));
+  }
+}
+
+.btn {
+  @extend %button;
+  border-color: $color-1;
+  background: opacity($color-1); 
+
+  &:hover, &:focus {
+    border-color: darken($color-1, 5%);
+    background: opacity(darken($color-1, 5%));   
+  }
+}
+
+.btn-disabled {
+  @extend %button;
+  border-color: $gray-lighter;
+  background: opacity($gray-lighter); 
+  color: $gray-dark;
+  &:hover, &:focus {
+    border-color: darken($gray-lighter, 5%);
+    background: opacity(darken($gray-lighter, 5%));   
+  }
+  &:active {
+    @include transform(translateY(0));
+  }
+}

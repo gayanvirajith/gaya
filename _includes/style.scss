@@ -27,3 +27,13 @@ ul.social-media li>a {
 ul.social-media li>a:hover {
   background-color: lighten({{ site.theme.highlight_color }}, 50%);
 }
+
+.btn {
+  border-color: {{ site.theme.highlight_color }};
+  background: rgba({{ site.theme.highlight_color }}, 1);
+}
+
+.btn:hover, .btn:focus {
+  border-color: darken({{ site.theme.highlight_color }}, 5%);
+  background: darken(rgba({{ site.theme.highlight_color }}, 1), 5%);
+}

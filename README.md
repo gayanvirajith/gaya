@@ -8,5 +8,6 @@
 - [ ] Categories/Tags feature
 - [ ] All categories page.
 - [ ] All tags page.
-- [ ] Change profile picture on sidebar
-- [ ] Change about page content
+- [x] Change profile picture on sidebar
+- [x] Change about page content
+- [ ] Back to top button

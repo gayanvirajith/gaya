@@ -31,8 +31,10 @@
  * header               - Site header
  * sidebar              - Sidebar & toggle
  * post/pages           - Post/Page articles
+ * paginate buttons     - Paginate buttons
  * post-banner          - Banner image/video
  * comments             - Post comments
+ * author info/links    - Author info and share buttons
  */
 
 
@@ -564,6 +566,27 @@ img {
     small {
       color: inherit; 
     }
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS-PAGINATE-BUTTONS
+\*------------------------------------*/
+
+/*
+ * Paginate buttons used for index page
+ *
+ */
+
+.pagination {
+  display: block;
+  padding-bottom: 2em;
+  @include MQ(M) {
+    padding-bottom: 4em;
   }
 }
 
