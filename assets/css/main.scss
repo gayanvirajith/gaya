@@ -217,6 +217,7 @@ img {
   width: 100%;
   padding: 1em 0;  
   @include MQ(M){
+    margin-bottom: 4rem;
     display: table;
     height: 50px;
   }
