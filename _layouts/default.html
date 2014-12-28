@@ -7,13 +7,25 @@
     <title></title>
 
     <meta charset="utf-8">
+    {% comment %}
     <!-- Enable responsiveness on mobile devices-->
+    {% endcomment %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% if page.browser_title %}{{ page.browser_title }}{% elsif page.title %}{{ page.title | append: ' - ' | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.description }}{% endif %}">
     {% include open-graph.html %}
-    
+  
+    {% comment %}
+    The meta tag below is useful when you want to verify the website to 
+    Google web-master tools in an alternative way. Simply configure your site verification key on
+    _config.yml given by Google web-master tools.
+    {% endcomment %}
+
+    {% if site.theme.google_webmaster_key %}
+    <meta name="google-site-verification" content="{{ site.theme.google_webmaster_key }}" />
+    {% endif %}
+
     <link rel="alternate" type="application/rss+xml" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl | prepend: site.baseurl }}">
     <link rel="prefetch" href="{{ site.url }}">
@@ -49,6 +61,7 @@
       <div class="container content">
           {{ content }}
       </div>
+      <a href="#0" class="wc-top">Top</a>
       
     </div>
 
@@ -74,5 +87,8 @@
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script async type="text/javascript" src="{{ '/assets/js/gaya.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+    
+    {% comment %} Google Analytics {% endcomment %}
+    {% include google-analytics.html %}   
   </body>
 </html>

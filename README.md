@@ -6,9 +6,8 @@
 - [x] IE fallback page.
 - [x] Social media share buttons for post page.
 - [x] Change profile picture on sidebar
-- [x] Change about page content
-- [ ] Categories/Tags feature
-- [ ] All categories page.
-- [ ] All tags page.
-- [ ] Back to top button
 - [x] SEO meta description
+- [x] Change about page content
+- [x] Google analytics
+- [x] Google webmaster tools key
+- [x] Back to top button

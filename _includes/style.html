@@ -5,7 +5,8 @@
 a, .post-title a { color: {{ site.theme.highlight_color }};}
 a:hover { border-bottom-color: {{ site.theme.highlight_color }};}
 .sidebar { background-color: {{ site.theme.highlight_color }};}
-.sidebar-toggle:active,
+
+.wc-top, .sidebar-toggle:active,
 #sidebar-checkbox:checked ~ .sidebar-toggle { 
   background-color: {{ site.theme.highlight_color }};
 }
@@ -41,6 +42,7 @@ ul.social-media li>a:hover {
   border-color: darken({{ site.theme.highlight_color }}, 5%);
   background: darken(rgba({{ site.theme.highlight_color }}, 1), 5%);
 }
+
 {% endcapture %}
 {{ include_to_scssify | scssify }}
 

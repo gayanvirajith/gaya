@@ -23,8 +23,18 @@ layout: default
       </a>
     </h1>
 
-    <div class="post-meta">{{ post.date | date_to_string }}</div>
-     {{ post.excerpt }}
+    <p class="post-meta">
+    {% if (post.categories.size > 0 %}
+      <span class="categories">
+      {{ post.categories | array_to_sentence_string }}
+      </span> |
+    {% endif %}
+    <span class="post-date">
+    {{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}  
+    </span>
+    </p>
+
+    {{ post.excerpt }}
   </article>
   {% endfor %}
 </div>

@@ -1,11 +1,10 @@
 # Site settings
 title: Your awesome title
 tagline: And Tagline
-email: your-email@domain.com
+email: webcreatelk@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Hi, I’m a professional UI/UX designrer and web developer. 
+  I love being minimal and creative.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://localhost:4000" # the base hostname & protocol for your site
 author: "Tom Warlker"
@@ -23,7 +22,13 @@ theme:
     pinterest: gayanvirajith
   show_share_buttons: true
   show_author_info: true
+
+  # Diqus comments manager - shortname
   discus_shortname: gaya-webcreate
+
+  # Google Analytics/Webmaster key, leave blank to ignore
+  google_analytics_key: UA-XXXXXXX-1
+  google_webmaster_key: 
 
 # Build settings
 markdown: kramdown
