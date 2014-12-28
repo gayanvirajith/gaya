@@ -11,3 +11,6 @@
 - [x] Google analytics
 - [x] Google webmaster tools key
 - [x] Back to top button
+- [ ] Image or iframe caption
+- [ ] Check disqus comments empty
+- [ ] Check with empty highlight color

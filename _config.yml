@@ -10,21 +10,25 @@ url: "http://localhost:4000" # the base hostname & protocol for your site
 author: "Tom Warlker"
 # Theme customization - please change from the defaults!
 theme:
-  # Color for top bar, links, etc
+  # Color for sidebar bar, links, etc
   highlight_color: "#205081" # "#272935"
   # Social media links, leave blank to ignore
   social: 
-    github: gayanvirajith
-    twitter: gayanvirajith
-    facebook: gayanvirajith
-    gplus: +GayanVirajith
-    dribble: gayan
+    github: web-create
+    twitter: webcreatelk
+    facebook: webcreatelk
+    gplus: +WebcreateLk
+    dribble: webcreatelk
     pinterest: gayanvirajith
+
+  # Enable share buttons on post footer
   show_share_buttons: true
+
+  # Show author picure, name and social links on post footer
   show_author_info: true
 
-  # Diqus comments manager - shortname
-  discus_shortname: gaya-webcreate
+  # Disqus comments manager - shortname
+  disqus_shortname: gaya-webcreate
 
   # Google Analytics/Webmaster key, leave blank to ignore
   google_analytics_key: UA-XXXXXXX-1
