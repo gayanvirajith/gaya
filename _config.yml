@@ -5,8 +5,8 @@ email: webcreatelk@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Hi, I’m a professional UI/UX designrer and web developer. 
   I love being minimal and creative.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:4000" # the base hostname & protocol for your site
+baseurl: "/gaya" # the subpath of your site, e.g. /blog/
+url: "http://webcreate.lk" # the base hostname & protocol for your site
 author: "Tom Warlker"
 # Theme customization - please change from the defaults!
 theme:
@@ -31,7 +31,7 @@ theme:
   disqus_shortname: gaya-webcreate
 
   # Google Analytics/Webmaster key, leave blank to ignore
-  google_analytics_key: UA-XXXXXXX-1
+  google_analytics_key: 
   google_webmaster_key: 
 
 # Build settings
