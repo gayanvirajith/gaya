@@ -14,3 +14,5 @@
 - [ ] Image or iframe caption
 - [ ] Check disqus comments empty
 - [ ] Check with empty highlight color
+- [ ] Fix safari toggle crash
+- [ ] Add logo & avatar properties to config.yml update the doc too 
