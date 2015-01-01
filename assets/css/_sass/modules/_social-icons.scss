@@ -12,12 +12,12 @@ ul.social-media {
   li > a {
     width: 24px;
     height: 24px;
-    border: 1px solid $color-white;
-    border-bottom-color: $color-white;
+    border: 1px solid lighten($color-1, 8%);
     background-image: url("./images/socials-icons..svg");
     background-size: 168px 48px;
+    background-color: darken($color-1, 2%);
     @include transition(background-color 0.2s);
-    border-bottom-color: transparent;
+    border-bottom-color: lighten($color-1, 8%);
 
     &:hover {
       background-color: $color-white;

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-date:   2014-11-22 22:19:55
+date:   2015-01-01 0:00:55
 categories: jekyll update
 banner_image: sample-banner-image-1.jpg
 comments: true

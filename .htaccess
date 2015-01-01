@@ -1,7 +1,13 @@
-#################
-# CACHE HEADERS #
-#################
-## BEGIN Expire headers
+# -----------------------------------------------------------------------------
+# Let ProcessWire handle 404s
+# -----------------------------------------------------------------------------
+
+ErrorDocument 404 /404.html
+
+# -----------------------------------------------------------------------------
+# CACHE HEADERS 
+# -----------------------------------------------------------------------------
+
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType image/jpg "access 1 year"
@@ -30,4 +36,3 @@
         Header set Cache-Control "max-age=2592000, private"
     </FilesMatch>
 </IfModule>
-## END Cache-Control Headers

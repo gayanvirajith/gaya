@@ -11,8 +11,9 @@
 - [x] Google analytics
 - [x] Google webmaster tools key
 - [x] Back to top button
-- [ ] Image or iframe caption
-- [ ] Check disqus comments empty
-- [ ] Check with empty highlight color
-- [ ] Fix safari toggle crash
-- [ ] Add logo & avatar properties to config.yml update the doc too 
+- [x] Check disqus comments empty
+- [x] Check with empty highlight color
+- [x] Fix safari toggle crash
+- [x] Add logo & avatar properties to config.yml update the doc too 
+- [x] Add/Modifying navigation menu
+- [ ] add gulpfile.js with minify task for gaya.js

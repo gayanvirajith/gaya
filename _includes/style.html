@@ -2,7 +2,9 @@
 
 <style type="text/css">
 {% capture include_to_scssify %}
+{% if site.theme.highlight_color && site.theme.highlight_color != '' %}
 a, .post-title a { color: {{ site.theme.highlight_color }};}
+
 a:hover { border-bottom-color: {{ site.theme.highlight_color }};}
 .sidebar { background-color: {{ site.theme.highlight_color }};}
 
@@ -10,15 +12,20 @@ a:hover { border-bottom-color: {{ site.theme.highlight_color }};}
 #sidebar-checkbox:checked ~ .sidebar-toggle { 
   background-color: {{ site.theme.highlight_color }};
 }
+
 .sidebar a:hover, .sidebar .sidebar-nav a   {
   border-bottom-color: lighten({{ site.theme.highlight_color }}, 5%); 
 }
+
 .sidebar .sidebar-nav {
   border-top-color: lighten({{ site.theme.highlight_color }}, 5%);
 }
-.sidebar .sidebar-nav a:hover {
+
+.sidebar .sidebar-nav a.sidebar-nav-item:hover,
+.sidebar .sidebar-nav a.sidebar-nav-item:focus {
   background: lighten({{ site.theme.highlight_color }}, 3%);
 }
+
 .sidebar .sidebar-nav .sidebar-nav-item.active {
   background-color: darken({{ site.theme.highlight_color }}, 3%);
 }
@@ -42,7 +49,7 @@ ul.social-media li>a:hover {
   border-color: darken({{ site.theme.highlight_color }}, 5%);
   background: darken(rgba({{ site.theme.highlight_color }}, 1), 5%);
 }
-
+{% endif %}
 {% endcapture %}
 {{ include_to_scssify | scssify }}
 

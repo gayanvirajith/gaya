@@ -236,6 +236,7 @@ img {
 }
 
 .header .header-logo {
+  min-height: 44px;
   padding-right: 10px;
   @include column(1);
   text-align: center;
@@ -344,7 +345,7 @@ img {
 /* Sidebar nav */
 .sidebar .sidebar-nav {
   margin: 0 -1em;
-  border-top: 1px solid $color-white;
+  border-top: 1px solid lighten($color-1, 8%);
 }
 
 .sidebar .sidebar-nav .sidebar-nav-item {
@@ -352,15 +353,17 @@ img {
   padding: .5rem 1rem;
 }
 
-
-
 .sidebar .sidebar-nav a {
-  border-bottom: 1px solid $color-white;
+  border-bottom: 1px solid lighten($color-1, 8%);
 }
 
 .sidebar .sidebar-nav a.sidebar-nav-item:hover,
 .sidebar .sidebar-nav a.sidebar-nav-item:focus {
+  background: lighten($color-1, 3%);
+}
 
+.sidebar .sidebar-nav .sidebar-nav-item.active { 
+  background-color: darken($color-1, 2%);
 }
 
 /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
@@ -448,12 +451,12 @@ img {
     &::before {
         top: -4px;
         width: 10px;
-        transform: rotate(-45deg);
+        @include transform(rotate(-45deg));
     }
     &::after {
         top: 4px;
         width: 10px;
-        transform: rotate(45deg);
+        @include transform(rotate(45deg));
     }        
   }
 }
@@ -488,7 +491,12 @@ img {
 }
 .main-wrapper,
 .sidebar-toggle {
-  @include transition(transform .5s ease-in-out)
+  // @include transition(transform .5s ease-in-out)
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  -moz-transition: -moz-transform .5s ease-in-out;
+  -ms-transition: -ms-transform .5s ease-in-out;
+  -o-transition: -o-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
 }
  
 #sidebar-checkbox:checked + .sidebar {
@@ -498,9 +506,7 @@ img {
 #sidebar-checkbox:checked ~ .sidebar,
 #sidebar-checkbox:checked ~ .main-wrapper,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  -webkit-transform: translateX(15rem);
-      -ms-transform: translateX(15rem);
-          transform: translateX(15rem);
+  @include transform(translateX(15rem))
 }
 
 
@@ -536,6 +542,11 @@ img {
 .post-title a {
   color: $color-1;
   border-bottom-width: 2px;
+}
+
+/* Put some padding arround post images */
+.post .post-content img, .page .post-content img {
+  padding: 1em 0;
 }
 
 /* Meta info after post-title */
