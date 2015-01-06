@@ -74,6 +74,21 @@
         "browser_warning_page": "{{ '/browser-warning/' | prepend: site.baseurl | prepend: site.url }}",
         "disqus_shortname": "{{ site.theme.disqus_shortname }}"
       };
+      /* Browser support detection */
+      var browserSupport = (function(){
+        var htmlElemClasses = document.querySelector('html').className.split(' ');
+        for ( var i = 0; i < htmlElemClasses.length; i += 1 ){
+          var className = htmlElemClasses[i];
+          if ( className === 'lt-ie9' ){
+            return true;
+          }
+        }
+      }());
+
+      if (browserSupport){
+        window.location="{{ '/browser-warning/' | prepend: site.baseurl | prepend: site.url }}";
+      }
+
       /* To avoid render blocking css */
       var cb = function() {
         var l = document.createElement('link'); l.rel = 'stylesheet';
@@ -84,6 +99,8 @@
           webkitRequestAnimationFrame || msRequestAnimationFrame;
       if (raf) raf(cb);
       else window.addEventListener('load', cb);
+
+
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script async type="text/javascript" src="{{ '/assets/js/gaya.js' | prepend: site.baseurl | prepend: site.url }}"></script>

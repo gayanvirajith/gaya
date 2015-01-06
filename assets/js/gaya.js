@@ -1,21 +1,4 @@
 /*
- * Browser support detection
- */
-var browserSupport = (function(){
-  var htmlElemClasses = document.querySelector('html').className.split(' ');
-  for ( var i = 0; i < htmlElemClasses.length; i += 1 ){
-    var className = htmlElemClasses[i];
-    if ( className === 'lt-ie9' ){
-      return true;
-    }
-  }
-}());
-
-if (browserSupport){
-  window.location=browser_warning_page;
-}
-
-/*
  * Sidebar toggle function 
  */
 
