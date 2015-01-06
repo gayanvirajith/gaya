@@ -16,4 +16,4 @@
 - [x] Fix safari toggle crash
 - [x] Add logo & avatar properties to config.yml update the doc too 
 - [x] Add/Modifying navigation menu
-- [ ] add gulpfile.js with minify task for gaya.js
+- [x] add gulpfile.js with minify task for gaya.js
