@@ -52,7 +52,7 @@ title: Your browser is not supported
             Explorer 6, 7 and 8. 
             To get the best experience on 
             <a href="{{ '' | prepend: site.baseurl | prepend: site.url | append: '/' }}">
-              <strong>{{ site.url }}</strong>
+              <strong>{{ site.url | append: site.baseurl }}</strong>
             </a> we recommend using latest version of
             <a href="https://www.google.com/chrome">Chrome</a>,
             <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>,
