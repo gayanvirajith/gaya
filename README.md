@@ -16,7 +16,7 @@ Please submit as an
 [issue](https://github.com/web-create/harmony/issues/new), I am happy 
 to response back.
 
-## Theme option and configurations
+## Theme options and configurations
 
 
 

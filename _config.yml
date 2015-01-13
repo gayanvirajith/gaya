@@ -16,11 +16,11 @@ theme:
   highlight_color: "#205081" #205081" # "#272935"
   # Social media links, leave blank to ignore
   social: 
-    github: web-create
-    twitter: webcreatelk
-    facebook: webcreatelk
-    gplus: +WebcreateLk
-    dribble: webcreatelk
+    github: gayanvirajith
+    twitter: gayanvirajith
+    facebook: gayanvirajith
+    gplus: +gayanvirajith
+    # dribble: gayanvirajith
     pinterest: gayanvirajith
 
   # Enable share buttons on post footer
