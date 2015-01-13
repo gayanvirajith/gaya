@@ -10,6 +10,8 @@ smartphones, tablets, Desktops or even the large monitors.
 - SEO Friendly
 - Embed image, YouTube/Vimeo video or SoundCloud audio to your post.
 
+![Theme preview](http://gayan.me/thumbnails/gaya-jekyll-theme-preview-590x300.png "Gaya jekyll theme")
+
 ### Need Help?
 
 Please submit as an 
