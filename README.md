@@ -61,7 +61,7 @@ about configuration can be found on the [Jekyll Documentationn][jekyll]
 `disqus_shortname` | Disqus Short name for Disqus comments. Leave empty to disable comments.
 `google_analytics_key` | Enter your Google analytics tracking ID to enable analytic support.
 `google_webmaster_key` | Enter your Google web-master verification key to verify your site with the web-master tool. (This is an alternative way of verifying your site with the web-master tool, the general way is to upload a file to your server.)
-## License
+
 
 ### Page level configurations
 
@@ -100,6 +100,7 @@ At some point you want to link an external URL, in that case you could edit the 
 </nav>
 ```
 
+## License
 
 (The MIT License)
 
