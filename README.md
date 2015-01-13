@@ -1,19 +1,80 @@
 # Gaya Jekyll Theme
 
-#### Todo
+It is a modern & responsive theme made for jekyll blogging platform. 
+Gaya is a simple theme build from ground up with the focus of performance. 
+The theme itself quickly adapts to the users device, so it looks great on 
+smartphones, tablets, Desktops or even the large monitors.
 
-- [x] 404 page.
-- [x] IE fallback page.
-- [x] Social media share buttons for post page.
-- [x] Change profile picture on sidebar
-- [x] SEO meta description
-- [x] Change about page content
-- [x] Google analytics
-- [x] Google webmaster tools key
-- [x] Back to top button
-- [x] Check disqus comments empty
-- [x] Check with empty highlight color
-- [x] Fix safari toggle crash
-- [x] Add logo & avatar properties to config.yml update the doc too 
-- [x] Add/Modifying navigation menu
-- [x] add gulpfile.js with minify task for gaya.js
+- Ability to change theme color at any time with any color.
+- Easy customizable menu navigation.
+- SEO Friendly
+- Embed image, YouTube/Vimeo video or SoundCloud audio to your post.
+
+### Need Help?
+
+Please submit as an 
+[issue](https://github.com/web-create/harmony/issues/new),I am happy 
+to response back.
+
+## Theme option and configurations
+
+## Configuration
+
+Following options can be seen within the file `_config.yml`. More information 
+about configuration can be found on the [Jekyll Documentationn][jekyll]
+
+
+### General settings
+
+`title` | The title of your blog shown in the site header along with the logo.
+`tagline` | The site tagline also shown in the site header along with the title.
+`email` | The email address associated with blog/site.
+`description` | The site description used to show author's/site's description in the top of the sidebar.
+`baseurl` | The subpath of your site, e.g. /blog/. More information can be found in the [Jekyll Documentationn][jekyll].
+`url` | The base host name & protocol for your site. More information can be found in the [Jekyll Documentationn][jekyll].
+`logourl` | Path to main logo image.
+`author_thumbnail` | Path to author's thumbnail image. 
+`author` | Name of the author.
+`paginate` | Number of posts to show per page, More information can be found in the [Jekyll Documentationn][jekyll].
+
+### Social profile links
+
+`github` | GitHub link (Leave empty to exclude)
+`twitter` | Twitter link (Leave empty to exclude)
+`facebook` | Facebook link (Leave empty to exclude)
+`gplus` | Google plus link (Leave empty to exclude)
+`dribble` | Dribble link (Leave empty to exclude)
+`pinterest` | Pinterest link (Leave empty to exclude)
+
+### Theme settings
+
+`highlight_color` | The main highlight/theme color of the site. You can put any color as a hex color. The configured color will be applied to sidebar, anchor links, buttons etc.
+`show_share_buttons` | Set as True/False to enable or disable Post share option.
+`show_author_info` | Set as True/False to enable or disable the author information on a post.
+`disqus_shortname` | Disqus Short name for Disqus comments. Leave empty to disable comments.
+`google_analytics_key` | Enter your Google analytics tracking ID to enable analytic support.
+`google_webmaster_key` | Enter your Google web-master verification key to verify your site with the web-master tool. (This is an alternative way of verifying your site with the web-master tool, the general way is to upload a file to your server.)
+
+
+### Page level configurations
+
+These configurations can be found within the top section of the each page, see the a post under `_posts` directory for example. 
+
+`banner_image` | Specify the image name eg: `sample-banner-image-1.jpg` for banner image for the post. Jekyll system tries to locate the image under `assets/images`. So make sure you place all banner images under assets/images.
+`banner_video` | If you want to embed `Youtube/Vimeo` Video or `SoundCloud` audio, Specify the resource within single quotes. Please have a look on example post in `_posts/2014-12-14-what-is-nodejs.md` to see how we embed YouTube video. 
+`comments` | Set as True/False, if false will disable comments for current page/post.
+`browser_title` | SEO property.  Use this property if you want to display different browser title other than default page title. Please have a look on example post under `_posts/2014-12-14-what-is-nodejs.md` to see how we used the property.
+`meta_description` | SEO property. Use this property If you want to have unique meta description for each post. See the example post on `_posts/2014-12-14-what-is-nodejs.md` to see how we used the property.
+
+
+## License
+
+(The MIT License)
+
+Copyright (c) 2014 Gayan Virajith
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
