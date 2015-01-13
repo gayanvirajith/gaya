@@ -26,7 +26,7 @@ to response back.
 
 | Property name | Description  |
 ------------ | -------------
-title | The title of your blog shown in the site header along with the logo.
+`title` | The title of your blog shown in the site header along with the logo.
 
 ## License
 
