@@ -63,6 +63,45 @@ about configuration can be found on the [Jekyll Documentationn][jekyll]
 `google_webmaster_key` | Enter your Google web-master verification key to verify your site with the web-master tool. (This is an alternative way of verifying your site with the web-master tool, the general way is to upload a file to your server.)
 ## License
 
+### Page level configurations
+
+These configurations can be found within the top section of the each page, see the a post under `_posts` directory for example. 
+
+| Property name | Description  |
+------------ | -------------
+`banner_image` | Specify the image name eg: `sample-banner-image-1.jpg` for banner image for the post. Jekyll system tries to locate the image under `assets/images`. So make sure you place all banner images under assets/images.
+`banner_video` | If you want to embed `Youtube/Vimeo` Video or `SoundCloud` audio, Specify the resource within single quotes. Please have a look on example post in `_posts/2014-12-14-what-is-nodejs.md` to see how we embed YouTube video. 
+`comments` | Set as True/False, if false will disable comments for current page/post.
+`browser_title` | SEO property.  Use this property if you want to display different browser title other than default page title. Please have a look on example post under `_posts/2014-12-14-what-is-nodejs.md` to see how we used the property.
+`meta_description` | SEO property. Use this property If you want to have unique meta description for each post. See the example post on `_posts/2014-12-14-what-is-nodejs.md` to see how we used the property.
+
+### Sidebar navigation configurations
+
+As jekyll supports data files, **Gaya** theme uses `YAML` [data file][df] to load sidebar navigation items. You could find the `main-nav.yaml` data file under `_data/` directory. You could add any number of menu items by modifying `main-nav.yaml`. 
+
+An example of `main-nav.yaml`:
+
+{% highlight yaml %}
+- title: "About me" # Title/Caption of the menu item
+  href: "/about" # the page where it pointed
+- title: "Blog Archive"
+  href: "/archive"
+{% endhighlight %}
+
+At some point you want to link an external URL, in that case you could edit the `_includes/sidebar.html` file. See the following example:
+
+{% highlight html %}
+<nav class="sidebar-nav">
+   <a class="sidebar-nav-item" 
+      href="http://www.example.com"
+      target="_blank">
+      Example site
+    </a>
+</nav>
+{% endhighlight %}
+
+
+
 (The MIT License)
 
 Copyright (c) 2014 Gayan Virajith
