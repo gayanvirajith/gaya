@@ -51,6 +51,16 @@ about configuration can be found on the [Jekyll Documentationn][jekyll]
 `dribble` | Dribble link (Leave empty to exclude)
 `pinterest` | Pinterest link (Leave empty to exclude)
 
+### Theme settings
+
+| Property name | Description  |
+------------ | -------------
+`highlight_color` | The main highlight/theme color of the site. You can put any color as a hex color. The configured color will be applied to sidebar, anchor links, buttons etc.
+`show_share_buttons` | Set as True/False to enable or disable Post share option.
+`show_author_info` | Set as True/False to enable or disable the author information on a post.
+`disqus_shortname` | Disqus Short name for Disqus comments. Leave empty to disable comments.
+`google_analytics_key` | Enter your Google analytics tracking ID to enable analytic support.
+`google_webmaster_key` | Enter your Google web-master verification key to verify your site with the web-master tool. (This is an alternative way of verifying your site with the web-master tool, the general way is to upload a file to your server.)
 ## License
 
 (The MIT License)
