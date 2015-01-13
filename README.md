@@ -81,16 +81,16 @@ As jekyll supports data files, **Gaya** theme uses `YAML` [data file][df] to loa
 
 An example of `main-nav.yaml`:
 
-{% highlight yaml %}
+```
 - title: "About me" # Title/Caption of the menu item
   href: "/about" # the page where it pointed
 - title: "Blog Archive"
   href: "/archive"
-{% endhighlight %}
+```
 
 At some point you want to link an external URL, in that case you could edit the `_includes/sidebar.html` file. See the following example:
 
-{% highlight html %}
+```
 <nav class="sidebar-nav">
    <a class="sidebar-nav-item" 
       href="http://www.example.com"
@@ -98,8 +98,7 @@ At some point you want to link an external URL, in that case you could edit the 
       Example site
     </a>
 </nav>
-{% endhighlight %}
-
+```
 
 
 (The MIT License)
