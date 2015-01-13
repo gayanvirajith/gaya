@@ -22,7 +22,10 @@ to response back.
 
 ## Theme options and configurations
 
+### General settings
 
+------------ | -------------
+`title` | The title of your blog shown in the site header along with the logo.
 
 ## License
 
