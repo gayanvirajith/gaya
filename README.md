@@ -40,6 +40,16 @@ about configuration can be found on the [Jekyll Documentationn][jekyll]
 `author` | Name of the author.
 `paginate` | Number of posts to show per page, More information can be found in the [Jekyll Documentationn][jekyll].
 
+### Social profile links
+
+| Property name | Description  |
+------------ | -------------
+`github` | GitHub link (Leave empty to exclude)
+`twitter` | Twitter link (Leave empty to exclude)
+`facebook` | Facebook link (Leave empty to exclude)
+`gplus` | Google plus link (Leave empty to exclude)
+`dribble` | Dribble link (Leave empty to exclude)
+`pinterest` | Pinterest link (Leave empty to exclude)
 
 ## License
 
