@@ -1,0 +1,4 @@
+- title: "About me" # Title/Caption of the menu item
+  href: "/about" # the page where it pointed 
+- title: "Blog Archive"
+  href: "/archive"

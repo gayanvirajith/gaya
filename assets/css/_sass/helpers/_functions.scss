@@ -1,0 +1,15 @@
+// Returns lighter color
+@function opacity($color, $opacity: .8) {
+	@return rgba($color, $opacity);
+}
+
+
+
+
+
+// Rem fallback - credits: http://zerosixthree.se/
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+

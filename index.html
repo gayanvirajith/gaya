@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <article class="post">
+
+    {% if post.banner_image %}
+    <div class="banner-image">
+      <a href="{{ post.url | append: '/' | replace: '//', '/' | prepend: site.baseurl | prepend: site.url |  }}" 
+        title="{{ post.title }}">
+      <img 
+          src="{{ "/assets/images/" | append: post.banner_image | prepend: site.baseurl | prepend: site.url }}" 
+          alt="{% if post.banner_image_alt %}{{ post.banner_image_alt }}{% else %}{{ post.title }} {% endif %}">
+      </a>
+    </div>
+    {% endif %}
+
+    <h1 class="post-title">
+      <a href="{{ post.url | append: '/' | replace: '//', '/' | prepend: site.baseurl | prepend: site.url |  }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <p class="post-meta">
+    {% if (post.categories.size > 0 %}
+      <span class="categories">
+      {{ post.categories | array_to_sentence_string }}
+      </span> |
+    {% endif %}
+    <span class="post-date">
+    {{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}  
+    </span>
+    </p>
+
+    {{ post.excerpt }}
+  </article>
+  {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  
+  {% if paginator.next_page %}
+      <a class="pagination-item older btn" href="{{ paginator.next_page_path | prepend: site.baseurl | append: '/' | replace: '//', '/' }}">Older</a>    
+  {% else %}
+    <span class="pagination-item older btn-disabled">Older</span>
+  {% endif %}
+  
+  {% if paginator.previous_page %}
+    <a class="pagination-item newer btn " href="{{ paginator.previous_page_path | prepend: site.baseurl | append: '/' | replace: '//', '/' }}">Newer</a>
+  {% else %}
+    <span class="pagination-item newer btn-disabled">Newer</span>
+  {% endif %}  
+  
+</div>
+{% endif %}
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "{{ '' | prepend: site.baseurl | prepend: site.url | append: '/' }}"
+    }
+}
+</script>

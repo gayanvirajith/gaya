@@ -1,0 +1,41 @@
+.wc-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background-image: url(./images/top-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-color: $gray-light;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  border-bottom: none;
+  @include border-radius(2px);
+  right: 1em;
+  bottom: 2em;
+  @include MQ(M) {
+    bottom: 4em;
+    right: 2em;
+  }
+}
+.wc-top.wc-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.wc-top.wc-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .wc-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}

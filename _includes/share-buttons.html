@@ -1,0 +1,23 @@
+{% capture share_button %}
+<div class="share-buttons">
+  <h5>Share this post on</h5>
+  <ul class="social-media">
+    <li>
+        <a title="{{ site.theme.social.twitter }} on Twitter" 
+          href="https://twitter.com/intent/tweet?original_referer={{site.url}}{{page.url}}&amp;text={{page.title}}&amp;url={{site.url}}{{page.url}}" class="twitter wc-img-replace" target="_blank">
+          Twitter
+        </a>
+    </li>   
+    <li>
+        <a title="{{ site.theme.social.gplus }} on Google Plus" 
+            href="https://plus.google.com/share?url={{site.url}}{{page.url}}" 
+            class="google wc-img-replace" target="_blank">Google</a>
+    </li>
+    <li>
+        <a title="{{ site.theme.social.facebook }} on Facebook" 
+            href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}{{page.url}}&amp;t={{page.title}}" 
+            class="facebook wc-img-replace" target="_blank">Facebook</a>
+    </li>
+  </ul>
+</div>
+{% endcapture %}{{ share_button | strip_newlines }}

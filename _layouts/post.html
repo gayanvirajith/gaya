@@ -1,0 +1,73 @@
+---
+layout: default
+---
+<div class="post">
+
+  {% if page.banner_image %}
+  <div class="banner-image">
+    <img 
+        src="{{ "/assets/images/" | append: page.banner_image | prepend: site.baseurl | prepend: site.url }}" 
+        alt="{{ page.banner_image_alt }}">
+  </div>
+  {% endif %}
+
+  {% if page.banner_video %}
+    <div class="banner_video">
+      {{ page.banner_video }}
+    </div>
+  {% endif %}
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">
+    {% if (page.categories.size > 0 %}
+      <span class="categories">
+      {{ page.categories | array_to_sentence_string }}
+      </span> |
+    {% endif %}
+    <span class="post-date">
+    {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}  
+    </span>
+    </p>
+  </header>
+
+  <article class="post-content">
+    {{ content }}    
+  </article>
+
+  {% if site.related_posts %}
+    <div class="related-posts">
+      <h4>Related Posts</h4>
+      <ul>
+        {% for post in site.related_posts limit:3 %}
+          <li>
+            <h5>
+              <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
+                {{ post.title }}
+                <small>{{ post.date | date_to_string }}</small>
+              </a>
+            </h5>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  <div class="author-info">
+    {% if site.theme.show_author_info %}
+      {% include author.html %}
+    {% endif %}
+  
+    {% if site.theme.show_share_buttons %}
+      {% include share-buttons.html %}
+    {% endif %}  
+  </div>
+  
+  {% if page.comments %}
+    <div class="comments">
+        <a href="javascript:;" class="load-view">View Comments...</a>
+        <div id="disqus_thread"></div>
+        <div id="g-comments"></div>
+    </div>
+  {% endif %}
+</div>

@@ -1,0 +1,687 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+/**
+ *
+ * Gaya jekyll theme
+ * Designed, built, by web-create. 
+ *
+ * CONTENTS
+ *
+ * SETTINGS
+ * Globals              - Import sass global variables and configs properties
+ *
+ * TOOLS
+ * Mixins/Functions     - Sass mixins & functions
+ * Modules              - Sass modules
+ *
+ * GENERTIC
+ * Resets               - Gloabal resets thanks to meyerweb.com
+ * Body resets          - Body resets, box sizing 
+ * 
+ * BASE
+ * Typography           - Custom typography
+ * Syntax               - Syntax highlighting
+ * 
+ * OBJECTS
+ * Wrappers             - Wrapping and constraining elements.
+ *  
+ * COMPONENTS
+ * header               - Site header
+ * sidebar              - Sidebar & toggle
+ * post/pages           - Post/Page articles
+ * paginate buttons     - Paginate buttons
+ * post-banner          - Banner image/video
+ * comments             - Post comments
+ * author info/links    - Author info and share buttons
+ */
+
+
+
+
+
+@charset "utf-8";
+
+
+
+
+
+/*------------------------------------*\
+    #SETTINGS-GLOBALS
+\*------------------------------------*/
+
+@import "helpers/variables";
+
+
+
+
+
+
+/*------------------------------------*\
+    #TOOLS-MIXINGS-AND-FUNCTIONS
+\*------------------------------------*/
+
+@import "helpers/all";
+
+
+
+
+
+/*------------------------------------*\
+    #TOOLS-MODULES
+\*------------------------------------*/
+
+@import "modules/all";
+
+
+
+
+
+/*------------------------------------*\
+    #GENERTIC-RESETS
+\*------------------------------------*/
+
+@import "base/reset";
+
+
+
+
+
+/*------------------------------------*\
+    #GENERTIC-BODY-RESETS
+\*------------------------------------*/
+
+/*
+ *
+ * Enable google webkit font smoothing
+ * Reset to border-box
+ * Setting up font family
+ */
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  //change the default tap highlight color, when you tap on mobile device
+  -webkit-tap-highlight-color: transparent;
+}
+
+*, *:after, *:before {
+  @include box-sizing(border-box);
+}
+
+body {
+  font: {
+    size: 100%;
+    family: $font-family-base; // variables inside partials > _variables.scss
+  }
+  color: $gray-dark;
+  background: $main-bg-color;
+}
+
+/* Prevent scroll on narrow devices */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Anchor tag style */
+a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  color: $color-1;
+}
+
+a:hover {
+  @include transition(all .3s);
+  border-bottom-color: $color-1; 
+}
+
+/* Responsive images */
+img {
+  border: 0;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*------------------------------------*\
+    #SETTINGS-TYPE
+\*------------------------------------*/
+
+@import "base/type";
+
+
+
+
+
+/*------------------------------------*\
+    #SETTINGS-SYNTAX
+\*------------------------------------*/
+
+@import "base/syntax-highlighting";
+
+
+
+
+
+/*------------------------------------*\
+    #OBJECTS-WRAPPERS
+\*------------------------------------*/
+
+/*
+ * Main wrapper is used to re-position the site content when sidebar is toggled.
+ */
+
+.main-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*
+ * Container - Centering the page content.
+ * 
+ */
+
+.container {
+  width: 90%;
+  max-width: $M; // See breakpoints in css/_sass/helpers/_layout.scss
+  margin: 0 auto;
+
+  &::after { /* Clearfix */
+      content: '';
+      display: table;
+      clear: both;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS-HEADER
+\*------------------------------------*/
+
+/*
+ * Header
+ *
+ * header used to keep the logo, site name and short description.
+ */
+
+.header {
+  background: $color-white;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid $gray-lighter;
+  width: 100%;
+  padding: 1em 0;  
+  @include MQ(M){
+    margin-bottom: 4rem;
+    display: table;
+    height: 50px;
+  }
+  
+  /* 
+   * Special media query hack for small tablet screen.
+   * Due to overlap of menu toggle and the logo.
+   */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .container {
+      width: 75%;
+    }
+  }
+}
+
+.header .header-logo {
+  min-height: 44px;
+  padding-right: 10px;
+  @include column(1);
+  text-align: center;
+}
+
+.header .header-logo img {
+  text-align: center;
+  margin: 0 auto; 
+}
+
+.header .header-logo a {
+  &:hover, &:focus {
+    border-bottom-color: transparent;
+  }
+}
+
+.header .header-title {
+  display: none;
+}
+
+.header .header-logo, .header .header-title {
+  @include MQ(M) {
+    float: none;
+    width: auto;
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.header .header-title h3 { 
+  margin-bottom: 15px; 
+  small {
+    padding-left: 10px;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS-SIDEBAR
+\*------------------------------------*/
+
+/*
+ * Sidebar
+ *
+ * The off-canvas sidebar, will be triggered by toggle button which will 
+ * rendered on the top left corner. 
+ *
+ */
+
+ /* Style and "hide" the sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -15rem;
+  width: 15rem;
+  visibility: hidden;
+  overflow-y: auto;
+  @include font-size(15px);
+  color: $color-white;
+  background-color: lighten($color-1, 5%);
+  -webkit-transition: all .5s ease-in-out;
+          transition: all .5s ease-in-out;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  @include MQ(M) {
+    @include font-size(15px);
+  }
+}
+
+/* Sidebar content */
+
+.sidebar { 
+  text-align: center; 
+  padding: 1em;
+}
+
+.sidebar a {
+  font-weight: normal;
+  color: $color-white;
+  text-decoration: none;
+}
+
+.sidebar .sidebar-info { padding: 1em 0; }
+
+.sidebar img { 
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;   
+  border-radius: 50%;
+}
+
+.sidebar .sidebar-info p { @include font-size(16px); }
+
+.sidebar .sidebar-info.small { padding: 1em 0; }
+
+.sidebar .sidebar-info.small p { @include font-size(12px);}
+
+.sidebar .sidebar-info p:last-child {
+  margin-bottom: 0;
+}
+
+/* Sidebar nav */
+.sidebar .sidebar-nav {
+  margin: 0 -1em;
+  border-top: 1px solid lighten($color-1, 8%);
+}
+
+.sidebar .sidebar-nav .sidebar-nav-item {
+  display: block;
+  padding: .5rem 1rem;
+}
+
+.sidebar .sidebar-nav a {
+  border-bottom: 1px solid lighten($color-1, 8%);
+}
+
+.sidebar .sidebar-nav a.sidebar-nav-item:hover,
+.sidebar .sidebar-nav a.sidebar-nav-item:focus {
+  background: lighten($color-1, 3%);
+}
+
+.sidebar .sidebar-nav .sidebar-nav-item.active { 
+  background-color: darken($color-1, 2%);
+}
+
+/* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
+.sidebar-checkbox {
+  display: none;
+}
+
+.wc-img-replace { /* replace text with a background-image */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+ 
+/* Style the `label` that we use to target the `.sidebar-checkbox` */
+.sidebar-toggle {
+  position: absolute;
+  top:  1rem;
+  left: 2rem;
+  display: block;
+  width: 44px;
+  height: 44px;
+  background: #FFF;
+  border-radius: .4em;
+  box-shadow: 0 0 10px rgba(#000, .4);
+  cursor: pointer;
+  @extend .wc-img-replace;
+  span {
+      /* the span element is used to create the menu icon */
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #555;
+      top: 50%;
+      margin-top: -1px;
+      left: 50%;
+      margin-left: -10px;
+      -webkit-transition: background 0.3s;
+      -moz-transition: background 0.3s;
+      transition: background 0.3s;
+
+      &::before, &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          background: inherit;
+          width: 100%;
+          height: 100%;
+
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+
+          -webkit-transition: -webkit-transform .2s, background 0s;
+          -moz-transition: -moz-transform .2s, background 0s;
+          transition: transform .2s, background 0s;
+      }
+
+      &::before {
+          top: -6px;
+          transform: rotate(0);
+      }
+
+      &::after {
+          bottom: -6px;
+          transform: rotate(0);
+      }
+  }
+}
+
+.sidebar-toggle:active,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  box-shadow:none;
+  background: lighten($color-1, 5%);
+  span {
+
+    background: #FFF;
+
+    &::before, &::after {
+        background: rgba(#FFF, 1);
+    }
+
+    &::before {
+        top: -4px;
+        width: 10px;
+        @include transform(rotate(-45deg));
+    }
+    &::after {
+        top: 4px;
+        width: 10px;
+        @include transform(rotate(45deg));
+    }        
+  }
+}
+
+@include MQ(M) {
+  .sidebar-toggle {
+    position: fixed;
+    top:  1.5rem;
+  }
+  .sidebar-toggle:before {
+    padding-bottom: .15rem;
+    border-top-width: .45rem;
+    border-bottom-width: .15rem;
+  }
+}
+
+
+
+/* 
+ * Slide effect
+ *
+ * Handle the sliding effects of the sidebar
+ *
+ */
+ 
+.main-wrapper,
+.sidebar,
+.sidebar-toggle {
+  -webkit-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.main-wrapper,
+.sidebar-toggle {
+  // @include transition(transform .5s ease-in-out)
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  -moz-transition: -moz-transform .5s ease-in-out;
+  -ms-transition: -ms-transform .5s ease-in-out;
+  -o-transition: -o-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+}
+ 
+#sidebar-checkbox:checked + .sidebar {
+  z-index: 10;
+  visibility: visible;
+}
+#sidebar-checkbox:checked ~ .sidebar,
+#sidebar-checkbox:checked ~ .main-wrapper,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  @include transform(translateX(15rem))
+}
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS-POST
+\*------------------------------------*/
+
+/*
+ * Post/Pages 
+ * Every post article can be wrapped in a container class named `.post` 
+ * and used in post layout under _layout folder.
+ * Every page content also wrapped in a container named `.page` and used 
+ * in page layout under _layout folder. 
+ */
+
+.post, .page {
+  margin-bottom: 2em;
+  padding: 1em;
+  @include MQ(M) {
+    margin-bottom: 4em;
+    padding: 2em;
+  }
+  background: $color-white;
+  @include border-radius(.2em);
+  box-shadow: 0 0 10px rgba(#000, .1);
+  overflow: hidden;
+}
+
+/* Article title / Page title */
+.post-title a {
+  color: $color-1;
+  border-bottom-width: 2px;
+}
+
+/* Put some padding arround post images */
+.post .post-content img, .page .post-content img {
+  padding: 1em 0;
+}
+
+/* Meta info after post-title */
+.post-meta {
+  color: $gray-light;
+  padding: 1.5em 0 2em 0;
+  letter-spacing: 1px;
+  @include MQ(M) {
+    font-size: 18px;    
+  }
+}
+
+/* Related post articles */
+.related-posts {
+  padding: 1em 0;
+  border-top: 1px solid $gray-lighter;
+  @include MQ(M) {
+    padding: 1em 0 1em 0;
+  }
+}
+
+.related-posts ul {
+  list-style: none;
+}
+
+.related-posts ul li a {
+  &:hover, &:focus {
+    small {
+      color: inherit; 
+    }
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS-PAGINATE-BUTTONS
+\*------------------------------------*/
+
+/*
+ * Paginate buttons used for index page
+ *
+ */
+
+.pagination {
+  display: block;
+  padding-bottom: 2em;
+  @include MQ(M) {
+    padding-bottom: 4em;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS-BANNER-IMAGE
+\*------------------------------------*/
+
+/*
+ *
+ * Banner image is the main image for aticle/page.
+ * see includes/banner-image.html
+ *
+ */
+
+.post .banner-image, 
+.page .banner-image, 
+.post .banner_video, 
+.page .banner_video {
+  margin: -1em -1em 0 -1em;
+  padding-bottom: 1em;
+  @include MQ(M) {
+    margin: -2em -2em 0 -2em;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS-COMMENTS
+\*------------------------------------*/
+
+/*
+ * 
+ * Disqus comments, share-buttons 
+ */
+
+.comments {
+  border-top: 1px solid $gray-lighter;
+  padding: 1.5em 0 1em 0;
+  @include column(1);
+  display: block;
+  position:relative;
+  @include font-size(14px);
+}
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS-AUTHOR-AND-SHARE-BUTTONS
+\*------------------------------------*/
+
+/*
+ * Author information on post page
+ */
+
+.author-info {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.author, .share-buttons {
+  border-top: 1px solid $gray-lighter;
+  padding: 1em 0 0 0;
+  @include column(1);
+  @include MQ(M) {
+    padding: 1em .5em 0 0;
+    @include column(.5);
+  } 
+}
+
+.author, .share-buttons { 
+  h5, h6 { margin: 0 0 4px 0; }
+  h5 { text-transform: uppercase; color: $gray-darker; }
+  p { @include font-size(14px); }
+  img { float:left; margin-right: 1em; }
+  ul { margin-bottom: 0; }
+}
