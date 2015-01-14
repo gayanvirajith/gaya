@@ -47,7 +47,7 @@ Gaya jekyll theme is a modern & responsive theme made for jekyll blogging platfo
 
 ### Support
 
-The brief documentation would help you to get the theme installed and customized. However, if you have any questions you could email us on [webcreatelk@gmail.com](mailto:webcreatelk@gmail.com) and we will be happy to help.
+The brief documentation would help you to get the theme installed and customized. However, if you have any questions you could submit as an [issue](https://github.com/web-create/harmony/issues/new) and we will be happy to help.
 
 If you have any bug reports, or feature requests, please let us know!
 
