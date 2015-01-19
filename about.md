@@ -13,7 +13,7 @@ on [Jekyll][jekyll] and [Processwire CMS/CMF][pw].
 
 ### Contact me
 
-Say `Hello` at [webcreatelk@gmail.com]({{ site.email }}) or find
+Say `Hello` at [gayanvirajith@gmail.com]({{ site.email }}) or find
 me on
 
 ---
