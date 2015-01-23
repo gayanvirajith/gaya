@@ -3,7 +3,7 @@
  {% if site.author_thumbnail && site.author_thumbnail != '' %}
   <a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">
     <img 
-      src="{{ '/assets/images/avatar.jpg' | prepend: site.baseurl | prepend: site.url }}"
+      src="{{ site.author_thumbnail | prepend: site.baseurl | prepend: site.url }}"
       alt="{{ site.title }}" width="60" height="60" />
   </a>
   {% endif %}
