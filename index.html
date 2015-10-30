@@ -35,7 +35,11 @@ layout: default
     </span>
     </p>
 
-    {{ post.excerpt }}
+    {% if site.excerpt_posts %}
+        {{ post.excerpt }}
+    {% else %}
+        {{ post.content }}
+    {% endif %}
     <a href="{{ post.url | append: '/' | replace: '//', '/' | prepend: site.baseurl | prepend: site.url |  }}">
       Continue reading »
     </a>
