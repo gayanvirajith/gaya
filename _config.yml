@@ -5,7 +5,7 @@ email: ti.vas@zenvia.com
 description: > # this means to ignore newlines until "baseurl:"
   Hi, I’m a professional UI/UX designer and web developer. 
   I love being minimal and creative.
-baseurl: "/gaya" # the subpath of your site, e.g. /blog/
+# baseurl: "/gaya" # the subpath of your site, e.g. /blog/
 url: "http://zenvia.github.io" # the base hostname & protocol for your site
 logourl: /assets/images/logo.png # Site logo
 author: "Zenvia"
