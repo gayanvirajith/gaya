@@ -1,4 +1,4 @@
 - title: "About me" # Title/Caption of the menu item
-  href: "http://zenvia.com" # the page where it pointed 
+  href: "zenvia.com" # the page where it pointed 
 - title: "Blog Archive"
   href: "/archive"
