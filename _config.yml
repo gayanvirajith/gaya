@@ -5,10 +5,10 @@ email: ti.vas@zenvia.com
 description: > # this means to ignore newlines until "baseurl:"
   Hi, I’m a professional UI/UX designer and web developer. 
   I love being minimal and creative.
-baseurl: "/gaya" # the subpath of your site, e.g. /blog/
-url: "http://gayan.me" # the base hostname & protocol for your site
+baseurl: "/zenvia" # the subpath of your site, e.g. /blog/
+url: "http://zenvia.github.io" # the base hostname & protocol for your site
 logourl: /assets/images/logo.png # Site logo
-author: "Tom Warlker"
+author: "Zenvia"
 author_thumbnail: "/assets/images/avatar.jpg" # Author avatar
 # Theme customization - please change from the defaults!
 theme:
@@ -16,12 +16,12 @@ theme:
   highlight_color: "#205081" #205081" # "#272935"
   # Social media links, leave blank to ignore
   social: 
-    github: gayanvirajith
-    twitter: gayanvirajith
-    facebook: gayanvirajith
-    gplus: +gayanvirajith
+    github: zenvia
+    twitter: zenviamobile
+    facebook: zenvia
+    gplus: +zenvia
     # dribble: gayanvirajith
-    pinterest: gayanvirajith
+    # pinterest: gayanvirajith
 
   # Enable share buttons on post footer
   show_share_buttons: true
