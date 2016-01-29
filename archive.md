@@ -2,7 +2,6 @@
 layout: page
 title: Blog Archive
 permalink: /archive/
-banner_image: sample-banner-image-3.jpg
 ---
 
 <div>
