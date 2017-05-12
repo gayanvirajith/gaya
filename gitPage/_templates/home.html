@@ -1,0 +1,177 @@
+<!-- <div ng-include src="'_templates/partials/navbar.html'" style="margin-bottom: 50px;"></div> -->
+
+<!-- The content -->
+<div class="block block-primary">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <div class="panel-auth-image" id="logo-zenvia"><img src="img/logo-zenvia.png"></div>
+        <div class="row">
+          <!-- <div class="col-sm-5 col-md-4">
+            <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250x250&w=250&h=250">
+          </div> -->
+
+
+          <!-- <h3 class="margin-no margin-bottom-small">Zenvia conversation platform</h3> -->
+          <div class="col-xs-12 text-center">
+            <h1 class=" display-1 text-normal mb-2 color-neutral-white">Zenvia no GIT</h1>
+
+            <p class="lead">
+              Conheça a plataforma que vai revolucionar a comunicação digital.
+          <br>
+              Construa seus <em class="text-semibold">Bots</em> de forma simples e rápida.
+          <br>
+              Crie seus próprios canais com nossas APIs.
+            </p>
+            <!-- <a href="#!/docs/index" class="btn btn-lg btn-cta mt-2">Conheça mais</a> -->
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="block bg-color-grey-200" ng-show="user.user">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1 text-center">
+        <span class="display-3">Ver meu token <button type="button" class="btn btn-outline btn-outline-cta btn-lg" data-toggle="modal" data-target="#tokenModal">call to action</button></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <hr>
+</div>
+<div ng-controller="gitHubDataController">
+  <div class="block">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 text-center">
+          <h2 class="text-uppercase">{{userData.name}} API's</h2>
+          <div class="row">
+            <div class="card-deck">
+              <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" ng-value="{{$index}}" class="card" style="min-width:250px;margin-bottom:10px;">
+                <a href="{{repo.html_url}}" target="_blank" style="text-decoration:none;" class="text-muted">
+                  <div class="card-block ">
+                    <h3 class="card-title">
+                      {{repo.name}}
+                  </h3>
+                    <p class="repo-stats"><span><i class="fa fa-star"></i> {{repo.stargazers_count}}</span> <span><i class="fa fa-code-fork"></i> {{repo.forks_count}}</span></p>
+                    <p class="card-text">{{repo.description}}</p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- <div class="container">
+                <h1 class="text-center">
+                     <span ng-hide="repoData"/>Loading...</span>
+                     <span />{{userData.name}}</span>
+                     <br>
+                     <a href="{{userData.html_url}}" class="btn btn-default">
+                         <span class="octicon octicon-octoface"></span>
+                         {{userData.login}}
+                     </a>
+
+                 </h1>
+
+                <div class="panel  panel-default">
+                  <div class="panel-heading">
+
+                    <form class="form-inline">
+                      <span>
+                             <h4>Repos <span class="badge">{{repoData.length}}</span>
+                      <input ng-model="searchText" placeholder="Find a repo..." class="form-control input-sm">
+                      </h4>
+                      </span>
+                    </form>
+
+                  </div>
+                  <div class="panel-body">
+                    <div class="list-group">
+                      <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" class="list-group-item ">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <h4>
+                                         <small>
+                                             <span ng-if="repo.fork" class="octicon octicon-repo-forked"></span>
+                                             <span ng-if="!repo.fork" class="octicon octicon-repo"></span>
+                                         </small>
+                                         <a href="{{repo.html_url}}" target="_blank" >
+                                             {{repo.name}}
+                                         </a>
+                                         <small>{{repo.description}}</small>
+                                     </h4>
+
+                            <small>
+                                         <a href="{{repo.homepage}}" class="">
+                                             <i class="fa fa-link"></i> WebPage
+                                         </a>
+                                     </small>
+                          </div>
+                          <div class="col-md-4">
+                            <dl class="dl-horizontal">
+                              <dt>Last Updated:</dt>
+                              <dd>{{repo.updated_at | date : short : timezone}}</dd>
+                              <dt>Created:</dt>
+                              <dd>{{repo.created_at| date : short : timezone}}</dd>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+              </div> -->
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="block bg-color-grey-300">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-3 col-xs-offset-1">
+            <div class="panel-auth-image text-left" id="logo-zenvia"><img src="https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=504&amp;name=logo.png" class="hs-image-widget " style="width:204px;border-width:0px;border:0px;" width="204" alt="logo.png" title="logo.png"
+                srcset="https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=252&amp;name=logo.png 252w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=504&amp;name=logo.png 504w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=756&amp;name=logo.png 756w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=1008&amp;name=logo.png 1008w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=1260&amp;name=logo.png 1260w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=1512&amp;name=logo.png 1512w"
+                sizes="(max-width: 504px) 100vw, 504px"></div>
+          </div>
+          <div class="col-xs-2">
+            <a href="https://desenvolvedores.zenvia.com" style="text-decoration:none;color:#6f2c91;" class="text-large">Desenvolvedores</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 col-xs-offset-1 text-muted text-left">
+            <h3>
+              SÃO PAULO
+            </h3>
+            <p>Av. Paulista, 2300, 18º andar</br>Conj. 182 e 184</br>Bela Vista - CEP 01310-300</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 col-xs-offset-1 text-muted text-left">
+            <h3>
+              PORTO ALEGRE
+            </h3>
+            <p>Av. Carlos Gomes, 300, 7º andar</br>Boa Vista - CEP 90480-000</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </footer>

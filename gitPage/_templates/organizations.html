@@ -1,0 +1,98 @@
+<div ng-include src="'_templates/partials/navbar.html'" style="margin-bottom: 50px"></div>
+
+<!-- The content -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="bg-color-">
+          <ol class="breadcrumb">
+            <li><a ng-href="#!/docs">Desenvolvedores</a></li>
+            <li class="active">Organizações</li>
+          </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 col-lg-2" ng-if="organizations.length > 0">
+      <div class="panel panel-default">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" ng-repeat="item in organizations"><a href ng-click="" data-org-id="{{ item.id }}">{{ item.name }}</a></li>
+        </ul>
+      </div>
+
+      <!-- <div class="no-content mb-2">
+        <i class="fa fa-th-list fa-5x"></i><br>
+        <span class="color-grey-400">Comece <a ng-href="#!/orgs/new">criando</a><br>uma organização</span>
+      </div> -->
+
+      <a ng-href="#!/orgs/new" class="btn btn-outline btn-outline-primary btn-block">Nova organização</a>
+
+    </div>
+
+    <div class="col-xs-12" ng-if="organizations.length == 0">
+      <div class="no-content huge mb-3">
+        <i class="fa fa-code"></i><br>
+        <span>Comece <a ng-href="#!/orgs/new">criando</a><br>uma organização</span>
+      </div>
+    </div>
+
+    <div class="col-sm-8 col-lg-10">
+
+
+
+      <div class="panel panel-default" ng-if="organizations.length > 0">
+        <div class="panel-body">
+          <h4>Organização ABC <span class="vertical-separator color-grey-300">|</span>
+            <span class="text-small color-grey-500"><strong>ID:</strong> ab2ac34d-1723-40ee-a809-d9d6a73793da</span></h4>
+
+          <!-- <ul class="list-unstyled">
+             <li><a href class="text-light">Estatísticas</a></li>
+             <li><a href class="text-light">Dúvidas? Documentação</a></i>
+          </ul> -->
+
+          <div class="card m-1 mt-2">
+            <div class="card-header card-credential">
+                Credencial App Mobile
+                <span class="vertical-separator color-grey-300">|</span>
+                <a href class="text-light">Estatísticas</a>
+                <span class="text-uppercase badge badge-success pull-right">ativo</span>
+            </div>
+            <div class="card-block">
+              <!-- <ul class="list-unstyled">
+                 <li><a href class="text-light">Estatísticas</a></li>
+                 <li><a href class="text-light">Configurações</a></li>
+              </ul> -->
+              <p class="text-light">Texto sobre a credencial</p>
+              <textarea class="form-control" rows="6" disabled copy>TOKEN</textarea>
+              <div class="text-right m-2">
+                <a href class="btn btn-default btn-sm">Revogar acesso</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card m-1">
+            <div class="card-header card-credential">
+              Credencial App Desktop
+              <span class="vertical-separator color-grey-300">|</span>
+              <a href class="text-light">Estatísticas</a>
+              <span class="text-uppercase badge badge-outline pull-right">inativo</span>
+            </div>
+            <div class="card-block">
+
+              <p class="text-light">Texto sobre a credencial</p>
+              <textarea class="form-control" rows="6" disabled copy>eyJhbGciOiJSUzI1NiJ9.eyJvcmdhbml6YXRpb25JZCI6ImFiMmFjMzRkLTE3MjMtNDBlZS1hODA5LWQ5ZDZhNzM3OTNkYSIsImNyZWRlbnRpYWxJZCI6IjEzM2QxNGY4LWQ3MmQtNDE1ZS05MDQxLWEzZTBkNDRhMGI3YSIsInVzZXJJZCI6ImRhMWIzZmUzLTljMDQtNDE3NS04Y2I5LTQ0M2UyOWExZDFkOCIsImp0aSI6IjFmYjBjZmI1NDBhMzQxNTc4ZDVkNTMxM2YwMzQ2Mjg4In0.GW78gcoZW1l5ekHrZLiJJevdmzSjjfCcbeRTEuMh86aTibmRqeQWC_z_bzEPwDC3E2AnwjiJgC6XBEhOmrYRjP3UwzULYdYw-o1YXDpmbGHCi39TDUqIiDqG4tW-hHScLvhQXxZ8UsZSD96NsJUN3mi5Yyncf2qhzTGlZfYy-hgUAXNdFR8r_lT1IKgCCqTsI7YSb03jNzWljOQnSJxoiEgL-yyB1lqd8MxmACuCy0RwBCSF64842b8YF4uk8m4TpJ358RutcOCwFIieEMgdodvhr8-w20xz8ZsDyiVe23WCJ9jnWRnEakxhp0hpJYFbed9dTGXsZBVIZZrl_yr9VA</textarea>
+              <div class="text-right m-2">
+                <a href class="btn btn-primary btn-sm">Ativar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-2">
+            <a href class="btn btn-outline btn-outline-primary btn-block">+ credencial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 mt-3">
+      <div class="developers-logo">
+        <img src="img/logo-zenvia.png" width="240" class="block-center">
+        <!-- <span class="text-light text-xlarge text-muted">for developers</span> -->
+      </div>
+      <div class="panel panel-default ">
+        <div class="panel-body">
+
+          <div class="wizard steps">
+            <div class="steps clearfix">
+              <ul role="tablist">
+                <li role="tab" class="first current"><a><span class="number">1</span> Create your<br>account</a></li>
+                <li role="tab" class="disabled"><a><span class="number">2</span> Confirm<br>registration</a></li>
+                <li role="tab" class="disabled last"><a><span class="number">3</span> API<br>Zenvia</a></li>
+              </ul>
+            </div>
+
+            <div class="content clearfix">
+              <form ng-submit="signup($event, user)">
+
+                <div class="panel-auth-form">
+                  <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="text" class="form-control" ng-model="user.externalId">
+                  </div>
+                  <!-- <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label>Confirme password</label>
+                    <input type="password" class="form-control">
+                  </div> -->
+                </div>
+                <div>
+                  <div class="alert alert-danger alert-inverse text-center animated pulse" ng-show="error">{{ error.message }}</div>
+                </div>
+                <div class="panel-auth-actions">
+                  <button type="submit" class="btn btn-primary btn-lg btn-block" ng-disabled="l"><i class="fa fa-circle-o-notch fa-spin fa-lg fa-fw" ng-show="l"></i> <span ng-hide="l">Sign up</span></button>
+                  <!-- <a href="#" class="btn btn-link btn-block">Esqueci minha senha</a> -->
+                </div>
+              </form>
+            </div>
+					</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

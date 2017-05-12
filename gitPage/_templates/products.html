@@ -1,0 +1,22 @@
+<!--
+  Template com informações sobre organizações do usuário e controle
+  das chaves de acesso.
+-->
+<div ng-include src="'_templates/partials/navbar.html'" style="margin-bottom: 30px"></div>
+
+<div class="container">
+  <div class="row">
+
+    <!-- The sidebar -->
+    <div class="col-sm-3"  ng-include src="'_templates/partials/products.sidebar.html'"></div>
+
+    <!-- The content -->
+    <div class="col-sm-9">
+      <div class="card">
+        <div class="card-block">
+          <div ng-include src="page.name"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
