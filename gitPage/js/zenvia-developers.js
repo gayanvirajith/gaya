@@ -6,11 +6,6 @@
 		'ngRoute',
 		'toastr',
 		'LocalStorageModule',
-		'nav',
-		'dev.signin',
-		'dev.signup',
-		'dev.docs',
-		'dev.orgs',
 		'git.hub'
 	])
 

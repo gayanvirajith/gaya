@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Zenvia Mobile">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Zenvia Mobile">
 
-    <title>Zenvia for developers</title>
+  <title>Zenvia for developers</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/zenvia-ui.css" rel="stylesheet">
-    <link href="css/zenvia-git.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/zenvia-ui.css" rel="stylesheet">
+  <link href="css/zenvia-git.css" rel="stylesheet">
 
 </head>
 
 <body ng-app="zenviaDevelopers">
 
-  <!-- <div class="alert alert-info text-center ng-hide" ng-show="sessionTimeout" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-    {{ sessionTimeout }}
-  </div> -->
   <div ng-view></div>
 
 
 
-  <!-- <script src="js/require.js" data-main="js/main.js"></script> -->
+
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
@@ -38,23 +35,9 @@
   <script src="js/angular-local-storage.min.js"></script>
   <script src="js/jquery.steps.min.js"></script>
   <script src="js/zenvia-developers.js"></script>
-  <script src="js/nav.js"></script>
-  <script src="js/dev.signin.js"></script>
-  <script src="js/dev.signup.js"></script>
-  <script src="js/dev.docs.js"></script>
-  <script src="js/dev.orgs.js"></script>
+
   <script src="js/git.call.js"></script>
-<!--
-  <script type="text/javascript" >
-  function printRepoCount() {
-  var responseObj = JSON.parse(this.responseText);
-  console.log(responseObj);
-  }
-  var request = new XMLHttpRequest();
-  request.onload = printRepoCount;
-  request.open('get', 'https://api.github.com/users/zenvia/repos', true)
-  request.send()
-  </script> -->
+
 
 </body>
 
