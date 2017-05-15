@@ -6,7 +6,7 @@
 		'ngRoute',
 		'toastr',
 		'LocalStorageModule',
-		'git.hub'
+		'github'
 	])
 
 	.config(['$routeProvider', '$locationProvider', '$anchorScrollProvider', 'localStorageServiceProvider', function($routeProvider, $locationProvider, $anchorScrollProvider, $localStorageServiceProvider) {
@@ -15,13 +15,13 @@
 			when('/', {
 				templateUrl: '_templates/home.html'
 			})
-			.when('/docs/index', {
-				templateUrl: '_templates/docs.index.html',
-				controller: 'DocsController'
-			})
-			.when('/docs/:page', {
-				templateUrl: '_templates/docs-content/{{page}}.html'
-			})
+			// .when('/docs/index', {
+			// 	templateUrl: '_templates/docs.index.html',
+			// 	controller: 'DocsController'
+			// })
+			// .when('/docs/:page', {
+			// 	templateUrl: '_templates/docs-content/{{page}}.html'
+			// })
 
 			// Singin / Signup
 			.when('/signin', {
@@ -72,6 +72,8 @@
 
 		$locationProvider.hashPrefix('!');
 		//$anchorScrollProvider.disableAutoScrolling
+
+
 	}])
 
 })();
