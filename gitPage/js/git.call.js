@@ -2,8 +2,14 @@
 
   'use strict';
 
-  angular.module('git.hub', [])
-    .controller('gitHubDataController', ['$scope', '$http', function($scope, $http) {
+  var github = angular.module('github', []);
+
+  github.config(function($interpolateProvider) {
+    $interpolateProvider.startSymbol('[[');
+    $interpolateProvider.endSymbol(']]');
+  });
+
+    github.controller('gitHubDataController', ['$scope', '$http', function($scope, $http) {
 
       $scope.reposLoaded = false;
 
