@@ -1,0 +1,103 @@
+<!-- <div ng-include src="'_templates/partials/navbar.html'" style="margin-bottom: 50px;"></div> -->
+
+<!-- The content -->
+<div class="block block-primary">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <div class="panel-auth-image" id="logo-zenvia"><img src="img/logo-zenvia.png"></div>
+        <div class="row">
+
+          <div class="col-xs-12 text-center">
+            <h1 class=" display-1 text-normal mb-2 color-neutral-white">Zenvia no GIT</h1>
+
+            <p class="lead">
+              Conheça a plataforma que vai revolucionar a comunicação digital.
+              <br> Construa seus <em class="text-semibold">Bots</em> de forma simples e rápida.
+              <br> Crie seus próprios canais com nossas APIs.
+            </p>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="block bg-color-grey-200" ng-show="user.user">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1 text-center">
+        <span class="display-3">Ver meu token <button type="button" class="btn btn-outline btn-outline-cta btn-lg" data-toggle="modal" data-target="#tokenModal">call to action</button></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <hr>
+</div>
+<div ng-controller="gitHubDataController">
+  <div class="block">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 text-center">
+          <h2 class="text-uppercase">[[userData.name]] API's</h2>
+          <div class="row">
+            <div class="card-deck">
+              <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" ng-value="[[$index]]" class="card" style="min-width:250px;margin-bottom:10px;">
+                <a href="[[repo.html_url]]" target="_blank" style="text-decoration:none;" class="text-muted">
+                  <div class="card-block ">
+                    <h3 class="card-title">
+                      [[repo.name]]
+                  </h3>
+                    <p class="repo-stats"><span><i class="fa fa-star"></i> [[repo.stargazers_count]]</span> <span><i class="fa fa-code-fork"></i> [[repo.forks_count]]</span></p>
+                    <p class="card-text">[[repo.description]]</p>
+                  </div>
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="block bg-color-grey-300">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-3 col-xs-offset-1">
+            <div class="panel-auth-image text-left" id="logo-zenvia"><img src="https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=504&amp;name=logo.png" class="hs-image-widget " style="width:204px;border-width:0px;border:0px;" width="204" alt="logo.png" title="logo.png"
+                srcset="https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=252&amp;name=logo.png 252w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=504&amp;name=logo.png 504w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=756&amp;name=logo.png 756w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=1008&amp;name=logo.png 1008w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=1260&amp;name=logo.png 1260w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=1512&amp;name=logo.png 1512w"
+                sizes="(max-width: 504px) 100vw, 504px"></div>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 text-muted text-left">
+            <h3>
+              SÃO PAULO
+            </h3>
+            <p>Av. Paulista, 2300, 18º andar</br>Conj. 182 e 184</br>Bela Vista - CEP 01310-300</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 text-muted text-left">
+            <h3>
+              PORTO ALEGRE
+            </h3>
+            <p>Av. Carlos Gomes, 300, 7º andar</br>Boa Vista - CEP 90480-000</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </footer>

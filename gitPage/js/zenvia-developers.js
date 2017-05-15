@@ -13,7 +13,7 @@
 		$routeProvider.
 			// Index page
 			when('/', {
-				templateUrl: '_templates/home.html'
+				templateUrl: 'templates/home.html'
 			})
 			// .when('/docs/index', {
 			// 	templateUrl: '_templates/docs.index.html',
