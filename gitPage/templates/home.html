@@ -50,7 +50,7 @@
           <h2 class="text-uppercase">[[userData.name]] API's</h2>
           <div class="row">
             <div class="card-deck">
-              <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" ng-value="[[$index]]" class="card" style="min-width:250px;margin-bottom:10px;">
+              <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" ng-value="[[$index]]" ng-class="{'class-ruby' : [[repo.language == 'Ruby']] , 'class-css' : [[repo.language == 'CSS']]}"  class="card" style="min-width:250px;margin-bottom:10px;">
                 <a href="[[repo.html_url]]" target="_blank" style="text-decoration:none;" class="text-muted">
                   <div class="card-block ">
                     <h3 class="card-title">

@@ -2918,6 +2918,20 @@ hr.divider:after {
   position: relative;
 }
 
+/*.class-ruby:hover{
+  background-color: rgba(111, 44, 145, 0.8);
+}
+.class-ruby > a:hover{
+  color: #fff;
+}
+
+.class-css:hover{
+  background-color: #0096dc;
+}
+.class-css a:hover{
+  color: #fff;
+}*/
+
 .card > .list-group:first-child .list-group-item:first-child {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
