@@ -3078,6 +3078,18 @@ footer {
 footer section {
   margin-top: 30px;
 }
+.footer-link-sidemargin {
+  margin: 0 5px;
+}
+.footer-link-nodecoration {
+  text-decoration: none;
+}
+.footer-toppadding-4 {
+  padding-top: 4rem;
+}
+.footer-rightpadding-5 {
+  padding-right: 5rem;
+}
 
 .navbar-zenvia {
   background: #6f2c91;
