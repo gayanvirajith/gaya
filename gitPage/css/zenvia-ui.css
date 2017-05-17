@@ -3081,7 +3081,7 @@ footer section {
 .footer-link-sidemargin {
   margin: 0 5px;
 }
-.footer-link-nodecoration {
+a.footer-link-nodecoration {
   text-decoration: none;
 }
 .footer-toppadding-4 {
