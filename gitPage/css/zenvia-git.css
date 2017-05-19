@@ -79,6 +79,9 @@ textarea[copy] {
 #logo-zenvia{
   margin-bottom: 10%;
 }
+#Header {
+  width: 300px;
+}
 
 /* Organizations page */
 .card-credential.card-header {

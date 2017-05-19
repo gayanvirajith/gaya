@@ -3078,7 +3078,7 @@ footer {
 footer section {
   margin-top: 30px;
 }
-.footer-link-sidemargin {
+.footer-link-sidemargin a{
   margin: 0 5px;
 }
 a.footer-link-nodecoration {
@@ -3089,6 +3089,9 @@ a.footer-link-nodecoration {
 }
 .footer-rightpadding-5 {
   padding-right: 5rem;
+}
+#logo-zenvia{
+  margin-bottom: 2rem;
 }
 
 .navbar-zenvia {
