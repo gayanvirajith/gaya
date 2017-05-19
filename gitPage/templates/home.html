@@ -1,44 +1,20 @@
-<!-- <div ng-include src="'_templates/partials/navbar.html'" style="margin-bottom: 50px;"></div> -->
-
-<!-- The content -->
 <div class="block block-primary">
-
   <div class="container">
     <div class="row">
-      <div class="col-xs-10 col-xs-offset-1">
-        <div class="panel-auth-image" id="logo-zenvia"><img src="img/logo-zenvia.png"></div>
+      <div class="col-xs-12 ">
+        <div  id="logo-zenvia"><img id="Header" src="img/Zenvia_Externa_Negativa.png"></div>
         <div class="row">
-
           <div class="col-xs-12 text-center">
             <h1 class=" display-1 text-normal mb-2 color-neutral-white">Zenvia no GIT</h1>
-
-            <p class="lead">
-              Conheça a plataforma que vai revolucionar a comunicação digital.
-              <br> Construa seus <em class="text-semibold">Bots</em> de forma simples e rápida.
-              <br> Crie seus próprios canais com nossas APIs.
+            <p class="lead color-neutral-white">
+              Acompanhe nossos repositórios e veja um pouco do nosso trabalho.
             </p>
-
           </div>
-
-
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<div class="block bg-color-grey-200" ng-show="user.user">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-10 col-xs-offset-1 text-center">
-        <span class="display-3">Ver meu token <button type="button" class="btn btn-outline btn-outline-cta btn-lg" data-toggle="modal" data-target="#tokenModal">call to action</button></span>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
 <div class="container">
   <hr>
 </div>
@@ -50,7 +26,7 @@
           <h2 class="text-uppercase">[[userData.name]] API's</h2>
           <div class="row">
             <div class="card-deck">
-              <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" ng-value="[[$index]]" ng-class="{'class-ruby' : [[repo.language == 'Ruby']] , 'class-css' : [[repo.language == 'CSS']]}"  class="card" style="min-width:250px;max-width:315px;margin-bottom:10px;">
+              <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" ng-value="[[$index]]" ng-class="{'class-ruby' : [[repo.language == 'Ruby']] , 'class-css' : [[repo.language == 'CSS']]}" class="card" style="min-width:250px;max-width:315px;margin-bottom:10px;">
                 <a href="[[repo.html_url]]" target="_blank" style="text-decoration:none;" class="text-muted">
                   <div class="card-block jumbotron-icon">
                     <span><i class="fa fa-github fa-3x"></i></span>
@@ -62,8 +38,6 @@
                   </div>
                 </a>
               </div>
-
-
             </div>
           </div>
         </div>
@@ -72,57 +46,39 @@
   </div>
   <footer>
     <div class="block bg-color-grey-300">
-  <div class="container">
-    <div class="row col-xs-10 col-sm-3 col-xs-offset-1">
-      <div class="row col-xs-12">
-        <div class="panel-auth-image text-left" id="logo-zenvia"><img src="https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=504&amp;name=logo.png" class="hs-image-widget " style="width:204px;border-width:0px;border:0px;" width="204" alt="logo.png" title="logo.png" srcset="https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=252&amp;name=logo.png 252w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=504&amp;name=logo.png 504w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=756&amp;name=logo.png 756w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=1008&amp;name=logo.png 1008w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=1260&amp;name=logo.png 1260w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=1512&amp;name=logo.png 1512w"
-            sizes="(max-width: 504px) 100vw, 504px"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12 text-muted text-left">
-          <h3>
-          SÃO PAULO
-        </h3>
-          <p>Av. Paulista, 2300, 18º andar</br>Conj. 182 e 184</br>Bela Vista - CEP 01310-300</p>
-        </div>
-
-      </div>
-      <div class="row">
-        <div class="col-xs-12 text-muted text-left">
-          <h3>
-            PORTO ALEGRE
-          </h3>
-          <p>Av. Carlos Gomes, 300, 7º andar</br>Boa Vista - CEP 90480-000</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 text-left">
+            <img id="logo-zenvia" src="https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=504&amp;name=logo.png" class="hs-image-widget " style="width:204px;border-width:0px;border:0px;" width="204" alt="logo.png" title="logo.png"
+              srcset="https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=252&amp;name=logo.png 252w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=504&amp;name=logo.png 504w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=756&amp;name=logo.png 756w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=1008&amp;name=logo.png 1008w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=1260&amp;name=logo.png 1260w, https://www.zenvia.com/hs-fs/hubfs/Zenvia_2016/images/logo.png?t=1494437901911&amp;width=1512&amp;name=logo.png 1512w"
+              sizes="(max-width: 504px) 100vw, 504px">
+            <div class=" text-muted text-left">
+              <span class="h3 text-uppercase">São Paulo</span>
+              <address>Av. Paulista, 2300, 18º andar</br>Conj. 182 e 184</br>Bela Vista - CEP 01310-300</address>
+            </div>
+            <div class=" text-muted text-left">
+              <span class="h3 text-uppercase">Porto Alegre</span>
+              <address>Av. Carlos Gomes, 300, 7º andar</br>Boa Vista - CEP 90480-000</address>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 footer-toppadding-4">
+            <ul class="footer-link-sidemargin list-unstyled text-medium text-semibold text-left">
+              <li><a href="https://desenvolvedores.zenvia.com/">Desenvolvedores</a></li>
+              <li><a href="https://www.zenvia.com/carreiras">Trabalhe Conosco</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4 text-right footer-toppadding-4 footer-link-sidemargin">
+            <a class="footer-link-nodecoration" href="https://www.facebook.com/ZenviaMobile">
+              <i class="fa fa-facebook-square fa-3x"></i>
+            </a>
+            <a class="footer-link-nodecoration" href="https://twitter.com/ZenviaMobile">
+              <i class="fa fa-twitter fa-3x"></i>
+            </a>
+            <a class="footer-link-nodecoration" href="https://www.linkedin.com/company/zenvia-mobile">
+              <i class="fa fa-linkedin-square fa-3x"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row col-xs-10 col-sm-3 text-medium text-semibold text-left col-xs-offset-1 footer-toppadding-4">
-        <div class="row col-xs-12">
-          <a class="footer-link-sidemargin" href="https://desenvolvedores.zenvia.com">
-            Desenvolvedores
-          </a>
-        </div>
-        <div class="row col-xs-12">
-          <a class="footer-link-sidemargin" href="https://www.zenvia.com/carreiras">
-            Trabalhe Conosco
-          </a>
-        </div>
-      </div>
-    <div class="row col-xs-10 col-sm-4 text-right footer-toppadding-4 footer-rightpadding-5">
-      <div class="col-xs-12 col-xs-offset-1 ">
-        <a class="footer-link-nodecoration footer-link-sidemargin" href="https://www.facebook.com/ZenviaMobile">
-          <span><i class="fa fa-facebook-square fa-3x"></i></span>
-        </a>
-        <a class="footer-link-nodecoration footer-link-sidemargin" href="https://twitter.com/ZenviaMobile">
-          <span><i class="fa fa-twitter fa-3x"></i></span>
-        </a>
-        <a class="footer-link-nodecoration footer-link-sidemargin" href="https://www.linkedin.com/company/zenvia-mobile">
-          <span><i class="fa fa-linkedin-square fa-3x"></i></span>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
   </footer>
