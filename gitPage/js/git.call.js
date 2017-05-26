@@ -4,9 +4,11 @@
 
   var github = angular.module('github', []);
 
-  github.config(function($interpolateProvider) {
+  github.config(function($interpolateProvider, $httpProvider ) {
     $interpolateProvider.startSymbol('[[');
     $interpolateProvider.endSymbol(']]');
+
+    $httpProvider.defaults.headers.get = { 'Accept' : 'application/vnd.github.mercy-preview+json' }
   });
 
     github.controller('gitHubDataController', ['$scope', '$http', function($scope, $http) {
@@ -30,7 +32,6 @@
             console.log(data);
           });
       };
-
 
       $scope.predicate = '-updated_at';
 

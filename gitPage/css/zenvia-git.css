@@ -82,6 +82,9 @@ textarea[copy] {
 #Header {
   width: 300px;
 }
+div.card-deck div.class-blog {
+  display: none;
+}
 
 /* Organizations page */
 .card-credential.card-header {
