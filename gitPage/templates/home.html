@@ -2,12 +2,12 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 ">
-        <div  id="logo-zenvia"><img id="Header" src="img/Zenvia_Externa_Negativa.png"></div>
+        <div id="logo-zenvia"><img id="Header" src="img/Zenvia_Externa_Negativa.png"></div>
         <div class="row">
           <div class="col-xs-12 text-center">
             <h1 class=" display-1 text-normal mb-2 color-neutral-white">Zenvia no GIT</h1>
             <p class="lead color-neutral-white">
-              Acompanhe nossos repositórios e veja um pouco do nosso trabalho.
+              Conheça alguns projetos que contribuímos e que você também pode contribuir.
             </p>
           </div>
         </div>
@@ -17,16 +17,18 @@
 </div>
 <div class="container">
   <hr>
+
 </div>
 <div ng-controller="gitHubDataController">
+
   <div class="block">
     <div class="container">
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1 text-center">
-          <h2 class="text-uppercase">[[userData.name]] API's</h2>
+          <h2 class="text-uppercase">[[userData.name]] REPO's</h2>
           <div class="row">
             <div class="card-deck">
-              <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" ng-value="[[$index]]" ng-class="{'class-ruby' : [[repo.language == 'Ruby']] , 'class-css' : [[repo.language == 'CSS']]}" class="card" style="min-width:250px;max-width:315px;margin-bottom:10px;">
+              <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" ng-value="[[$index]]" ng-class="{'class-blog' : [[repo.topics == 'blog']] ,'class-ruby' : [[repo.language == 'Ruby']] , 'class-css' : [[repo.language == 'CSS']]}" class="card" style="min-width:250px;max-width:315px;margin-bottom:10px;">
                 <a href="[[repo.html_url]]" target="_blank" style="text-decoration:none;" class="text-muted">
                   <div class="card-block jumbotron-icon">
                     <span><i class="fa fa-github fa-3x"></i></span>
