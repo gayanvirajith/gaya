@@ -18,7 +18,7 @@ me on
 
 ---
 
-{% include social.html %}
+
 
 [pw]: http://processwire.com
 [jekyll]: http://jekyllrb.com
