@@ -1,4 +1,3 @@
-_site/
-.sass-cache/
-Gemfile.lock
-
+_site
+.sass-cache
+.jekyll-metadata

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="icon" href="{{ "/assets/images/favicon.png" | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml" />
+
+    <!-- <link rel="stylesheet" href="{{ "/assets/css/application.css" | prepend: site.baseurl }}" /> -->
+    <link rel="stylesheet" href="https://uikit.zenvia.com/css/zenvia-ui-kit.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+</head>
+<body>
+  <div class="container">
+    {% include navbar.ext %}
+  </div>
+
+  <div class="hero is-bold is-primary is-small">
+    <div class="hero-body">
+      <div class="container">
+        <!-- <h1 class="subtitle is-4">{{ page.title }}</h1> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- <a href="../.gitignore">&laquo; Voltar</a> -->
+    <h6 class="mt-32 has-text-small"><a href="..">&laquo; Voltar</a></h6>
+    <h1 class="subtitle is-3">{{ page.title }}</h1>
+    <div class="content mt-32">
+      {{ content }}
+    </div>
+  </div>
+
+  <div class="mt-40">
+    {% include footer.ext %}
+  </div>
+</body>
+</html>
