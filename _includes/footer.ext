@@ -5,13 +5,13 @@
         <strong>Zenvia</strong> Smart conversations
       </p>
       <p>
-        <address>
+        <address class="text-small">
             São Paulo
             Av. Paulista, 2300 - 18º andar - conj. 182 e 184
             Bela Vista - 01310-300
         </address>
 
-        <address>
+        <address class="text-small">
           Porto Alegre
           Av. Dr. Nilo Peçanha, 2900 - 14º andar
           Chácara da Pedras - 91330-001
@@ -29,12 +29,12 @@
           </a>
           {% endif %}
           {% if site.social.facebook %}
-          <a class="icon is-medium" href="https://facebook.com/{{ site.social.facebook }}">
+          <a class="icon is-large" href="https://facebook.com/{{ site.social.facebook }}">
               <i class="fab fa-facebook fa-2x"></i>
           </a>
           {% endif %}
           {% if site.social.twitter %}
-          <a class="icon is-medium" href="https://twitter.com/{{ site.social.twitter }}">
+          <a class="icon is-large" href="https://twitter.com/{{ site.social.twitter }}">
               <i class="fab fa-twitter fa-2x"></i>
           </a>
           {% endif %}
