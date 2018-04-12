@@ -1,44 +1,134 @@
-<!DOCTYPE html>
-<html lang="pt">
+---
+layout: default
 
-<head>
+mustacheSetDelimiter: "{{=[[ ]]=}}"
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Zenvia Mobile">
+---
+<section class="hero is-primary is-bold">
+  <div class="hero-body">
+    <div class="container is-fluid has-text-centered">
+      <h1 class="title is-2 is-spaced">Zenvia</h1>
+      <h2 class="subtitle">Conheça alguns projetos que contribuímos<br>e que você também pode contribuir.</h2>
+    </div>
+  </div>
+</section>
 
-  <title>Zenvia for developers</title>
+<!-- <section class="hero is-white">
+  <div class="hero-body">
+    <div class="container">
+      <h3 class="title is-4">Falar sobre a zenvia</h3>
+      <p><em>TODO</em></p>
+    </div>
+  </div>
+</section> -->
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/animate.css" rel="stylesheet">
-  <link href="css/zenvia-ui.css" rel="stylesheet">
-  <link href="css/zenvia-git.css" rel="stylesheet">
+<!-- Repos -->
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h3 class="title is-4">Repositórios</h3>
+      <div class="columns is-multiline repositories">
+        <!-- // REPOSITORIES / Mustache -->
+      </div>
+    </div>
+  </div>
+</section>
 
-</head>
+<!-- Call to action to documentation -->
+<section class="section">
+  <div class="container has-text-centered">
+    <h3 class="title is-4">Documentação</h3>
+    <p>
+      <a class="button is-primary is-fatty is-large">Plataforma</a>
+      <!-- <a class="button is-fatty is-large">API</a> -->
+    </p>
+  </div>
+</section>
 
-<body ng-app="zenviaDevelopers">
+<!--
+<section class="section">
+    <div class="container is-fluid">
+        {% for post in paginator.posts %}
+        <div class="card post-card">
+            {% if post.thumbnail %}
+            <div class="card-image">
+                <figure class="image">
+                    <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">
+                        <img src="{{ post.thumbnail | prepend: site.baseurl }}" alt="{{ post.title }}">
+                    </a>
+                </figure>
+            </div>
+            {% endif %}
+            <div class="card-content">
+                <h3 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+                <p class="post-categories">
+                    {% for category in post.categories %}
+                    <a href="/{{ category | prepend: site.baseurl }}" class="tag {% if site.data.category[category].color %} is-{{ site.data.category[category].color }} {% endif %}">{{ category }}</a>
+                    {% endfor %}
+                </p>
+                {{ post.excerpt }}
+                <p><small>02.02.2017 - 06:36</small></p>
+            </div>
+        </div>
+        <br>
+        {% endfor %}
+        <nav class="pagination is-centered">
+            <a {% if paginator.previous_page %}href="..{{  paginator.previous_page_path }}"{% endif %} class="pagination-previous {% if paginator.previous_page %}{% else %} is-disabled {% endif %}">Önceki Yazılar</a>
+            <a {% if paginator.next_page %}href="..{{  paginator.next_page_path }}"{% endif %} class="pagination-next {% if paginator.next_page %}{% else %} is-disabled {% endif %}">Sonraki Yazılar</a>
+            <ul class="pagination-list">
+                {% for page in (1..paginator.total_pages) %}
+                <li>
+                    <a {% if page == paginator.page %}{% else %} href="{% if page == 1 %}../{% else %}{% if paginator.page != 1 %}../{% endif %}{{ page }}{% endif %}" {% endif %} class="pagination-link {% if page == paginator.page %} is-current {% endif %}">{{ page }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</section> -->
 
-  <div ng-view></div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
 
+<script id="repository" type="x-tmpl-mustache">
+  {{page.mustacheSetDelimiter}}
+  <div class="column is-4">
+    <div class="box has-text-grey">
+      <a href="[[html_url]]" target="_blank" style="text-decoration:none;">
+        <div class="has-text-centered">
+          <span class="icon is-medium"><i class="fab fa-github fa-2x"></i></span>
+          <h3 class="title is-5 has-text-grey">[[name]]</h3>
+          <p>
+            <span class="icon">
+              <i class="fas fa-star"></i>
+            </span>
+            [[ stargazers_count ]]
+            <span class="icon">
+              <i class="fas fa-code-branch"></i>
+            </span>
+            [[ forks_count ]]
+          </p>
+          <p class="has-text-small mt-8">[[description]] description</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</script>
 
+<script>
+  $(document).ready(function() {
+    $.ajax({
+      type: "GET",
+      url: "https://api.github.com/users/zenvia/repos",
+      success: function(repositories) {
+        console.log({ repositories: repositories });
 
+        for (var repo of repositories) {
+          console.log(repo);
+          $(".repositories").append(Mustache.render($("#repository").html(), repo));
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://unpkg.com/angular-toastr/dist/angular-toastr.tpls.js"></script>
-  <script src="js/angular-local-storage.min.js"></script>
-  <script src="js/jquery.steps.min.js"></script>
-  <script src="js/zenvia-developers.js"></script>
-
-  <script src="js/git.call.js"></script>
-
-
-</body>
-
-</html>
+        }
+      },
+      dataType: "json"
+  })
+});
+</script>
