@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="icon" href="{{ "/assets/images/favicon.png" | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml" />
+
+    <!-- <link rel="stylesheet" href="{{ "/assets/css/application.css" | prepend: site.baseurl }}" /> -->
+    <link rel="stylesheet" href="https://uikit.zenvia.com/css/zenvia-ui-kit.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+</head>
+<body>
+  <div class="container">
+    {% include navbar.ext %}
+  </div>
+
+  {{ content }}
+
+  {% include footer.ext %}
+  <!-- <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script> -->
+  <!-- <script src="{{ site.baseurl }}{{ "/assets/js/jquery-3.1.1.min.js" | prepend: site.baseurl }}"></script> -->
+  <!-- <script src="{{ "/assets/js/prism.js" | prepend: site.baseurl }}"></script>
+  <script>
+      $('.nav-toggle').bind('click', function(){
+          var menus = $(this).siblings(".nav-menu");
+          if(menus.hasClass('is-active')){
+              menus.removeClass('is-active');
+          } else {
+              menus.addClass('is-active');
+          }
+      });
+  </script>
+  <script>
+  (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//aydineray.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script> -->
+</body>
+</html>
