@@ -1,0 +1,54 @@
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Zenvia</strong> Smart conversations
+      </p>
+      <p>
+        <address>
+            São Paulo
+            Av. Paulista, 2300 - 18º andar - conj. 182 e 184
+            Bela Vista - 01310-300
+        </address>
+
+        <address>
+          Porto Alegre
+          Av. Dr. Nilo Peçanha, 2900 - 14º andar
+          Chácara da Pedras - 91330-001
+        </address>
+      </p>
+      <p>
+          {% if site.social.github %}
+          <a class="icon" href="https://github.com/{{ site.social.github }}">
+              <i class="fab fa-github"></i>
+          </a>
+          {% endif %}
+          {% if site.social.email %}
+          <a class="icon" href="mailto:{{ site.social.email }}">
+              <i class="fas fa-envelope-o"></i>
+          </a>
+          {% endif %}
+          {% if site.social.facebook %}
+          <a class="icon is-medium" href="https://facebook.com/{{ site.social.facebook }}">
+              <i class="fab fa-facebook fa-2x"></i>
+          </a>
+          {% endif %}
+          {% if site.social.twitter %}
+          <a class="icon is-medium" href="https://twitter.com/{{ site.social.twitter }}">
+              <i class="fab fa-twitter fa-2x"></i>
+          </a>
+          {% endif %}
+          {% if site.social.instagram %}
+          <a class="icon" href="https://instagram.com/{{ site.social.instagram }}">
+              <i class="fab fa-instagram"></i>
+          </a>
+          {% endif %}
+          {% if site.social.tumblr %}
+          <a class="icon" href="https://{{ site.social.tumblr }}.tumblr.com">
+              <i class="fab fa-tumblr"></i>
+          </a>
+          {% endif %}
+      </p>
+    </div>
+  </div>
+</footer>

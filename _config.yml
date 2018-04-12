@@ -1,61 +1,56 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
-title: Your awesome title
-tagline: And Tagline
-email: gayanvirajith@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Hi, I’m a professional UI/UX designer and web developer. 
-  I love being minimal and creative.
-baseurl: "/gaya" # the subpath of your site, e.g. /blog/
-url: "http://gayan.me" # the base hostname & protocol for your site
-logourl: /assets/images/logo.png # Site logo
-author: "Tom Warlker"
-author_thumbnail: "/assets/images/avatar.jpg" # Author avatar
-# Theme customization - please change from the defaults!
-theme:
-  # Color for sidebar bar, links, etc
-  highlight_color: "#205081" #205081" # "#272935"
-  # Social media links, leave blank to ignore
-  social: 
-    github: gayanvirajith
-    twitter: gayanvirajith
-    facebook: gayanvirajith
-    gplus: +gayanvirajith
-    # dribble: gayanvirajith
-    pinterest: gayanvirajith
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Zenvia
+email: contato@zenvia.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: /
+url:
+permalink: /:categories/:title/
+# twitter_username: jekyllrb
+social:
+  github:
+  email:
+  facebook: ZenviaMobile
+  linkeding: zenvia-mobile
+  twitter: ZenviaMobile
+  instagram:
+  tumblr:
 
-  # Enable share buttons on post footer
-  show_share_buttons: true
+collections:
+  documentation:
+  - login
+  - wizard
 
-  # Show author picure, name and social links on post footer
-  show_author_info: true
-
-  # Disqus comments manager - shortname
-  # disqus_shortname: gaya-webcreate
-
-  # Google Analytics/Webmaster key, leave blank to ignore
-  google_analytics_key: 
-  google_webmaster_key: 
+# sass:
+#   style: compressed
 
 # Build settings
 markdown: kramdown
+# theme: minima
+plugins:
+  - jekyll-feed
 
-# Permalinks
-permalink:        pretty
-
-# Pagination config
-paginate: 5
-
-# Files/Folders to be excluded from generated _site folder
-exclude: 
-  - CNAME
+# Exclude from processing.
+exclude:
   - Gemfile
-  - Rakefile
-  - README.md
-  - .gitignore
-  - .sass-cache
   - Gemfile.lock
-
-# Sass conversion configs
-sass:
-  sass_dir: assets/css/_sass
-  style: :compressed
+  - README.md
+  - LICENSE
+  - CNAME
+  - vendor

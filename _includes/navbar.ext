@@ -1,0 +1,112 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img class="logo" alt="Zenvia logotipo" src="https://app.zenvia.com/assets/images/logo-novo-zenvia.svg">
+    </a>
+    <a href="{{ "/" | relative_url }}" class="navbar-item">{{ site.name }}</a>
+    {% if site.social.github %}
+    <a href="https://github.com/{{ site.social.github }}" class="navbar-item is-hidden-desktop">
+      <span class="icon">
+          <i class="fab fa-github"></i>
+      </span>
+    </a>
+    {% endif %}
+    {% if site.social.email %}
+    <a href="mailto:{{ site.social.email }}" class="navbar-item is-hidden-desktop">
+      <span class="icon">
+          <i class="fab fa-envelope-o"></i>
+      </span>
+    </a>
+    {% endif %}
+    {% if site.social.facebook %}
+    <a href="https://facebook.com/{{ site.social.facebook }}" class="navbar-item is-hidden-desktop">
+    <span class="icon">
+        <i class="fab fa-facebook"></i>
+    </span>
+    </a>
+    {% endif %}
+    {% if site.social.twitter %}
+    <a href="https://twitter.com/{{ site.social.twitter }}" class="navbar-item is-hidden-desktop">
+      <span class="icon">
+          <i class="fab fa-twitter"></i>
+      </span>
+    </a>
+    {% endif %}
+    {% if site.social.instagram %}
+    <a href="https://instagram.com/{{ site.social.instagram }}" class="navbar-item is-hidden-desktop">
+      <span class="icon">
+          <i class="fab fa-instagram"></i>
+      </span>
+    </a>
+    {% endif %}
+    {% if site.social.tumblr %}
+    <a href="https://{{ site.social.tumblr }}.tumblr.com" class="navbar-item is-hidden-desktop">
+      <span class="icon">
+          <i class="fab fa-tumblr"></i>
+      </span>
+    </a>
+    {% endif %}
+    <div class="navbar-burger burger" data-target="navMenubd-main">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navMenubd-main" class="navbar-menu">
+    <div class="navbar-start">
+      <a href="https://desenvolvedores.zenvia.com/" class="navbar-item">Desenvolvedores</a>
+      <a href="https://www.zenvia.com/carreiras/" class="navbar-item">Trabalhe conosco</a>
+    </div>
+    <div class="navbar-end">
+      {% if site.social.github %}
+      <a href="https://github.com/{{ site.social.github }}" class="navbar-item is-hidden-desktop-only">
+      <span class="icon">
+          <i class="fab fa-github"></i>
+      </span>
+      </a>
+      {% endif %}
+      {% if site.social.email %}
+      <a href="mailto:{{ site.social.email }}" class="navbar-item is-hidden-desktop-only">
+      <span class="icon">
+          <i class="fab fa-envelope-o"></i>
+      </span>
+      </a>
+      {% endif %}
+      {% if site.social.facebook %}
+      <a href="https://facebook.com/{{ site.social.facebook }}" class="navbar-item is-hidden-desktop-only">
+      <span class="icon">
+          <i class="fab fa-facebook"></i>
+      </span>
+      </a>
+      {% endif %}
+      {% if site.social.twitter %}
+      <a href="https://twitter.com/{{ site.social.twitter }}" class="navbar-item is-hidden-desktop-only">
+      <span class="icon">
+          <i class="fab fa-twitter"></i>
+      </span>
+      </a>
+      {% endif %}
+      {% if site.social.instagram %}
+      <a href="https://instagram.com/{{ site.social.instagram }}" class="navbar-item is-hidden-desktop-only">
+      <span class="icon">
+          <i class="fab fa-instagram"></i>
+      </span>
+      </a>
+      {% endif %}
+      {% if site.social.tumblr %}
+      <a href="https://{{ site.social.tumblr }}.tumblr.com" class="navbar-item is-hidden-desktop-only">
+      <span class="icon">
+          <i class="fab fa-tumblr"></i>
+      </span>
+      </a>
+      {% endif %}
+      <div class="navbar-item">
+      </div>
+
+      <a href="{{ "/docs" | relative_url }}" class="navbar-item {% if page.url == "/docs" %} is-active {% endif %}">Documentação</a>
+      <!-- <a href="{{ "/api" | relative_url }}" class="navbar-item {% if page.url == "/api" %} is-active {% endif %}">API</a> -->
+    </div>
+  </div>
+
+</nav>
