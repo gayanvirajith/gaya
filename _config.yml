@@ -32,6 +32,11 @@ social:
   instagram:
   tumblr:
 
+collections:
+  documentation:
+  - login
+  - wizard
+
 # sass:
 #   style: compressed
 

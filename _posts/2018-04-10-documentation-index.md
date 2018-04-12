@@ -7,15 +7,10 @@ comments: false
 permalink: docs
 ---
 
-{% for category in site.categories %}
 <ul>
-  <li>{{ category | first }}</li>
-  <ul>
-  {% for posts in category %}
-    {% for post in posts %}
+  {% for post in site.posts %}
+    {% if post.title != 'Índice' %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
+    {% endif %}    
   {% endfor %}
-  </ul>
 </ul>
-{% endfor %}
