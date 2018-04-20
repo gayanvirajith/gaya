@@ -45,6 +45,9 @@ permalink:        pretty
 # Pagination config
 paginate: 5
 
+# Post excerpt setup
+excerpt_posts: true
+
 # Files/Folders to be excluded from generated _site folder
 exclude: 
   - CNAME

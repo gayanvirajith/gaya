@@ -55,6 +55,7 @@ about configuration can be found on the [Jekyll Documentationn][jekyll]
 `author_thumbnail` | Path to author's thumbnail image. 
 `author` | Name of the author.
 `paginate` | Number of posts to show per page, More information can be found in the [Jekyll Documentationn][jekyll].
+`excerpt_posts` | True if posts should be excerpted on main page, false if the full posts should be shown
 
 ### Social profile links
 
